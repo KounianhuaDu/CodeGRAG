@@ -1,0 +1,337 @@
+#include <cstdio>
+#include <string>
+#include <iostream>
+#include <sstream>
+#include <fstream>
+
+#include "clang/AST/AST.h"
+#include "clang/AST/ASTConsumer.h"
+#include "clang/AST/RecursiveASTVisitor.h"
+#include "clang/Frontend/ASTConsumers.h"
+#include "clang/Frontend/CompilerInstance.h"
+#include "clang/Frontend/FrontendActions.h"
+#include "clang/Rewrite/Core/Rewriter.h"
+#include "clang/Tooling/CommonOptionsParser.h"
+#include "clang/Tooling/Tooling.h"
+#include "llvm/Support/raw_ostream.h"
+#include "clang/AST/ASTContext.h"
+#include "clang/Analysis/CFG.h"
+
+#include "clang/AST/JSONNodeDumper.h"
+#include "clang/Lex/Lexer.h"
+#include "llvm/ADT/StringSwitch.h"
+#include "clang/AST/ASTDumperUtils.h"
+
+using namespace clang;
+using namespace clang::driver;
+using namespace clang::tooling;
+using namespace std;
+int endLineTag=0;
+int perDigit=4;
+string returnstr="";
+static llvm::cl::OptionCategory MyOptionCategory("MyOptions");
+static llvm::cl::opt<std::string> OutputFilename("o",
+                                                 llvm::cl::desc("Specify output filename that contains stmt:type"),
+                                                 llvm::cl::value_desc("output_filename"), llvm::cl::cat(MyOptionCategory));
+string findstr=".cpp:";
+LangOptions MyLangOpts;
+SourceManager *ptrMySourceMgr;
+Rewriter MyRewriter;
+ASTContext *TheContext;
+std::string createPointerRepresentation(const void *Ptr) {
+    return "0x" + llvm::utohexstr(reinterpret_cast<uint64_t>(Ptr), true);
+}
+
+//string getPosStr(string line, string col, int perDigit)
+//{
+//    cout<<line<<"\t"<<col<<endl;
+//    int lineLen=line.length() ;
+//    int colLen=col.length() ;
+//    int i= perDigit-lineLen;
+////    int j=lineLen-1;
+//    string newline=line;
+//    string newcol=col;
+//    while (i>0) {
+//        newline = "0" + newline;
+//        i--;
+//    }
+//    i=perDigit-colLen;
+//    while (i>0) {
+//
+//        newcol = "0" + newcol;
+//        i--;
+//    }
+//    return newline+newcol;
+//
+//}
+string getPosStr(string line, int perDigit)
+{
+    string col="";
+    int lineLen=line.length();
+    int i=lineLen-1;
+    while (line[i]!=':')
+    {
+        col=line[i]+col;
+        i--;
+    }
+    int j=perDigit-col.length();
+    while (j>0)
+    {
+        col="0"+col;
+        j--;
+    }
+    string ln="";
+    i=i-1;
+    while (line[i]!=':')
+    {
+        ln=line[i]+ln;
+        i--;
+    }
+    j=perDigit-ln.length();
+    while (j>0)
+    {
+        ln="0"+ln;
+        j--;
+    }
+    return ln+col;
+
+}
+string getPosStartEnd(const clang::Stmt* eleStmt)
+{
+//    const clang::Stmt* eleStmt=(singleSucc->begin())->getAs<clang::CFGStmt>()->getStmt();//取每successor的第一个
+//    try {
+        string start = (eleStmt->getBeginLoc()).printToString(*ptrMySourceMgr);
+        string newstart = getPosStr(start, perDigit);
+        string end = (eleStmt->getEndLoc()).printToString(*ptrMySourceMgr);
+        string newend = getPosStr(end, perDigit);
+        return newstart + ":" + newend;
+//    }
+//    catch() {
+//        return "";
+//    }
+}
+class MyASTVisitor : public RecursiveASTVisitor<MyASTVisitor> {
+public:
+    MyASTVisitor() {}
+//    bool VisitFunctionDecl(FunctionDecl *f) {
+    bool VisitDecl(Decl *f) {
+
+        string checkstr=f->getDeclKindName();
+        string endlineInfo = f -> getEndLoc().printToString(*ptrMySourceMgr);
+        string position= f -> getLocation () .printToString(*ptrMySourceMgr);
+        int positionLen=position.length() ;
+        int endLineNum = stoi(endlineInfo.substr(endlineInfo.find(":")+1, endlineInfo.rfind(":")));
+//        if (!((checkstr=="CXXMethod")||(checkstr=="Function") || (checkstr=="CXXConstructor") ||(checkstr=="CXXDestructor"))
+//          ||(endLineNum<endLineTag)
+//          ||((position.find("/include/")>=0) && (position.find("/include/")<positionLen))
+//          ||((position.find(".h:")>=0) && (position.find(".h:")<positionLen) ))
+//            return true;
+
+
+//        cout<<checkstr<<endl;
+
+//
+//        if ((endLineNum<endLineTag)||
+//            checkstr=="UsingDirective" ||
+//            ((position.find("/include/")>=0) && (position.find("/include/")<positionLen)) ||
+//            ((position.find(".h:")>=0) && (position.find(".h:")<positionLen) )) return true;
+
+
+
+
+// //       llvm::outs() << endLineNum<<"\t"<< endLineTag<<":\n";
+        endLineTag = endLineNum;
+//   //     f->dump();
+
+
+        if (f->hasBody()) {
+
+            Stmt *funcBody = f->getBody();
+            std::unique_ptr<CFG> sourceCFG = CFG::buildCFG(f, funcBody, TheContext, CFG::BuildOptions());
+            string FuncBlock=getPosStartEnd(funcBody);
+            string EntryID=to_string((sourceCFG->getEntry()).getBlockID());
+            FuncBlock=FuncBlock+","+EntryID+"\n";
+
+            for (CFG::const_iterator BI = sourceCFG->begin(), BE = sourceCFG->end(); BI != BE; BI++) {
+
+                string succStr="";
+                for (auto I = (*BI)->succ_begin(), E = (*BI)->succ_end(); I != E; ++I)//这里的iterator是针对block的
+                {
+                    clang::CFGBlock *singleSucc;
+                    if (I->isReachable ())
+
+                        singleSucc=I->getReachableBlock();
+                    else
+                        singleSucc=I->getPossiblyUnreachableBlock ();
+
+                    succStr=succStr+to_string(singleSucc->getBlockID ())+",";
+                }
+                if (succStr!="")
+                    succStr=succStr.substr(0,succStr.length()-1);
+                else
+                    succStr="N";
+
+
+                string predStr="";
+                for (auto I = (*BI)->pred_begin(), E = (*BI)->pred_end(); I != E; ++I)//这里的iterator是针对block的
+                {
+                    clang::CFGBlock *singlepred;
+                    if (I->isReachable ())
+                        singlepred=I->getReachableBlock();
+                    else
+                        singlepred=I->getPossiblyUnreachableBlock ();
+                    predStr=predStr+to_string(singlepred->getBlockID ())+",";
+                }
+                if (predStr!="")
+                    predStr=predStr.substr(0,predStr.length()-1);
+                else
+                    predStr="N";
+                //llvm::outs() <<"pred blocks: "<<succStr<<"\n";
+
+                string BlockID=to_string((*BI)->getBlockID());
+//                llvm::outs()<<"**********\nblockid:"<<BlockID<<"\n"<<"succ blocks: "<<succStr<<"\n"<<"pred blocks: "<<succStr<<"\n********\n";
+                string elementsInfo="";
+//                string BlockInfo="";
+                for (clang::CFGBlock::iterator eb = (*BI)->begin(), ee = (*BI)->end(); eb != ee; eb++) {
+                    const clang::Stmt* eleStmt=eb->getAs<clang::CFGStmt>()->getStmt();
+
+                    std::string str1;
+                    llvm::raw_string_ostream os(str1);
+                    eleStmt->dump(os,*ptrMySourceMgr);
+                    string newstr=os.str();
+//                    printf("%s\n",os.str().c_str());
+//                    cout<<str1<<endl;
+                    int j=0;
+                    string operatorID="";
+                    char splitop=' ';
+                    while (newstr[j]!=splitop) j++;
+                    j++;
+
+                    while(newstr[j]!=splitop)
+                    {
+                        operatorID=operatorID+str1[j];
+                        j++;
+                    }
+//                    cout<<"end"<<operatorID<<"end"<<endl;
+
+                    elementsInfo=elementsInfo+operatorID+"-";
+
+                }
+                elementsInfo=elementsInfo.substr(0,elementsInfo.length()-1);
+                FuncBlock=FuncBlock+ BlockID+"|"+predStr+"|"+succStr+"|"+elementsInfo+"\n";
+
+            }
+            returnstr=returnstr+FuncBlock.substr(0,FuncBlock.length()-1)+"#\n";
+            cout<<returnstr<<endl;
+        }
+
+        return true;
+    }
+
+//private:
+//    ASTContext  &TheContext;
+};
+class MyASTConsumer : public ASTConsumer {
+public:
+    MyASTConsumer(): Visitor() {} //initialize MyASTVisitor
+
+    virtual bool HandleTopLevelDecl(DeclGroupRef DR) {
+
+        for (DeclGroupRef::iterator b = DR.begin(), e = DR.end(); b != e; ++b) {
+            Visitor.TraverseDecl(*b);
+        }
+        return true;
+    }
+
+private:
+    MyASTVisitor Visitor;
+};
+class MyFrontendAction : public ASTFrontendAction {
+public:
+    MyFrontendAction() {}
+
+    void EndSourceFileAction() override { // Fill out if necessary
+    }
+
+    std::unique_ptr<ASTConsumer> CreateASTConsumer(
+            CompilerInstance &CI, StringRef file) override {
+
+        MyLangOpts = CI.getLangOpts();
+        ptrMySourceMgr= &(CI.getSourceManager());
+        MyRewriter= Rewriter(*ptrMySourceMgr, MyLangOpts);
+        TheContext=const_cast<ASTContext *>(&CI.getASTContext());
+        return llvm::make_unique<MyASTConsumer>();
+    }
+};
+void getKindList(string jsonstr)
+{
+    int jsonstrLen=jsonstr.length();
+
+    string typeKind="";
+    int typeKindLength=0;
+    int index=0;
+    while ((index=jsonstr.find("\"kind\": \""))>=0 &&  jsonstr.find("\"kind\": \"")<jsonstrLen)
+    {
+        string tempstr="";
+        index=index+9;
+        int tempLen=0;
+        while (jsonstr[index]!='\"')
+        {
+            tempstr=tempstr+jsonstr[index];
+            index=index+1;
+            tempLen=tempLen+1;
+        }
+
+        if (!(typeKind.find(tempstr)>=0 && typeKind.find(tempstr)< typeKindLength))
+        {
+            typeKindLength=typeKindLength+tempLen+2;//一个是加的逗号，一个是tempstr的长度tempLen+1
+            typeKind=typeKind+tempstr+",";
+        }
+        jsonstr=jsonstr.substr(index,jsonstrLen);
+        jsonstrLen=jsonstrLen-index;
+    }
+    if (typeKind!="")
+    {
+        cout<< "***";
+        cout << typeKind<<endl;
+    }
+}
+int main(int argc, const char **argv) {
+    int rtn_flag=0;
+//      cout<<"#";
+    CommonOptionsParser op(argc, argv, MyOptionCategory);
+
+    ClangTool Tool(op.getCompilations(), op.getSourcePathList());
+
+    rtn_flag= Tool.run(newFrontendActionFactory<MyFrontendAction>().get());
+//    cout<<returnstr<<endl;
+//    cout<<rtn_flag;
+    if (rtn_flag==1) return 0;
+//    getKindList(returnstr);
+
+    vector<string> tags;
+    tags.assign(argv + 1, argv + argc);
+    string pathOrg=tags[0];
+
+    ofstream write;
+    int endPos=pathOrg.length()-4;
+    string writepath="data/CLQ-code16-CFG";
+
+    for (int i=11; i<endPos;i++) writepath=writepath+pathOrg[i];
+    writepath=writepath+".txt";
+    cout<<writepath<<endl;
+//    returnstr=returnstr.substr(0,returnstr.length()-2)+;
+    write.open(writepath);
+    write<<returnstr<<endl;
+//    cout<<returnstr<<endl;
+    return rtn_flag;
+//    return rtn_flag;
+}
+
+
+
+
+
+
+
+

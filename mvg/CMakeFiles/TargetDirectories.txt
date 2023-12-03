@@ -1,0 +1,5 @@
+/home/rrt/codemate/mvg/parser/CMakeFiles/intrinsics_gen.dir
+/home/rrt/codemate/mvg/parser/CMakeFiles/clang-tablegen-targets.dir
+/home/rrt/codemate/mvg/parser/CMakeFiles/cfg.dir
+/home/rrt/codemate/mvg/parser/CMakeFiles/edit_cache.dir
+/home/rrt/codemate/mvg/parser/CMakeFiles/rebuild_cache.dir

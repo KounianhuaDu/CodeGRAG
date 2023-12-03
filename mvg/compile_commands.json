@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/rrt/codemate/mvg/parser",
+  "command": "/usr/bin/c++ -I/usr/lib/llvm-9/include -std=c++11 -O3 -o CMakeFiles/cfg.dir/ac_parser.cpp.o -c /home/rrt/codemate/mvg/parser/ac_parser.cpp",
+  "file": "/home/rrt/codemate/mvg/parser/ac_parser.cpp",
+  "output": "CMakeFiles/cfg.dir/ac_parser.cpp.o"
+}
+]
