@@ -19,11 +19,9 @@ from utils.utils import *
 
 def build_instruction(languge: str, question: str):
     return '''
-Please continue to complete the function. You are not allowed to modify the given code and do the completion only. Please return all completed function in a codeblock. Please only generate the function body. Here is the given code to do completion:
-```{}
+Please continue to complete the C++ function according to the requirements and function declarations. You are not allowed to modify the given code and do the completion only.\n
 {}
-```
-'''.strip().format(languge.lower(), question.strip())
+'''.strip().format(question.strip())
 
 def generate_one_completion(problem, language='cpp'):
     task = problem['prompt']
@@ -33,19 +31,21 @@ def generate_one_completion(problem, language='cpp'):
     response = openai.ChatCompletion.create(
         model='gpt-3.5-turbo',
         messages=[{"role": "user", "content": prompt}],
-        max_tokens=2048,  # 调整生成文本的长度
+        max_tokens=1024,  # 调整生成文本的长度
         temperature=0.0,  # 调整生成文本的随机性
         top_p=0.0,
     )
     message = response.choices[0]["message"]["content"]
-    print(message)
-    exit()
-
+    #print(message)
+    #print(message)
     #problem['output'] = message
-    
     #return extract_generation_code(problem, lang_code=language)
-
-    code = extract_generation_code(message, language)
+    code = extract_function_body(message)
+    #print(code)
+    #exit()
+    #code = extract_generation_code(message, language)
+    #print(code)
+    #exit()
     return code
 
 def main(output_path):
