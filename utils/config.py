@@ -3,8 +3,8 @@ import logging
 import os
 import openai
 
-#API_KEY = "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"
-API_KEY = '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'
+API_KEY = "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"
+#API_KEY = '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'
 openai.api_key = API_KEY
 logging.basicConfig(format='%(levelname)s %(asctime)s %(process)d %(message)s',level=logging.INFO)
 

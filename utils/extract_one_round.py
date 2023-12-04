@@ -22,9 +22,9 @@ if __name__ == "__main__":
     
     parser = argparse.ArgumentParser(description="Using different models to generate function")
     
-    parser.add_argument("--path", default="/home/knhdu/output/humanevalX/", help="data path")
+    parser.add_argument("--path", default="../output", help="data path")
     parser.add_argument("--file", default="samples.jsonl", help="data path")
-    parser.add_argument("--output", default="/home/knhdu/output/humanevalX/OneRoundCo", help="data path")
+    parser.add_argument("--output", default="../output/OneRoundRes", help="data path")
     
     args = parser.parse_args()
     

@@ -44,8 +44,8 @@ def generate_one_completion(problem, language='cpp'):
     #print(code)
     #exit()
     #code = extract_generation_code(message, language)
-    #print(code)
-    #exit()
+    print(code)
+    exit()
     return code
 
 def main(output_path):
