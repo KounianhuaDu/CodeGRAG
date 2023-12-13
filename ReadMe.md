@@ -20,9 +20,9 @@ python build_graph.py
 ```
 
 - Code embedding
-Under utils folder:
+We use code-T5 to encode the codes. Under [`utils`](utils/) folder:
 ```bash
-python code_enc.py
+python code_enc.py --path [codepath]
 ```
 
 - Sentence embedding

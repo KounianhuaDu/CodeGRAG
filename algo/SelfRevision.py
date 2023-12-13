@@ -24,7 +24,7 @@ def construct_faiss_index(embeddings):
     embeddings = pca.apply(embeddings)
     '''
 
-    embeddings = preprocessing.normalize(embeddings, 'l2')
+    #embeddings = preprocessing.normalize(embeddings, 'l2')
 
     d = embeddings.shape[1]
     index = faiss.IndexFlatIP(d)
@@ -38,13 +38,30 @@ def search_with_faiss(query, data_list, index, pca, k):
 
     query_embed = np.expand_dims(query_embed, axis=0)
     #query_embed = pca.apply(query_embed)
-    query_embed = preprocessing.normalize(query_embed, 'l2')
+    #query_embed = preprocessing.normalize(query_embed, 'l2')
     
     distances, indices = index.search(query_embed, k)
 
     prompt_str_list = [str(data_list[idx.item()]) for idx in indices[0][:k]]
     prompt = '\n'.join(prompt_str_list)
     return prompt
+
+def search_with_faiss_multi(query, code_data_list, graph_data_list, index, pca, k):
+    inputs = tokenizer.encode(query, return_tensors = "pt").to(device)
+    query_embed = model(inputs)[0]
+    query_embed = query_embed.cpu().detach().numpy() 
+
+    query_embed = np.expand_dims(query_embed, axis=0)
+    
+    distances, indices = index.search(query_embed, k)
+
+    prompt_str_list = [str(code_data_list[idx.item()]) for idx in indices[0][:k]]
+    code_prompt = '\n'.join(prompt_str_list)
+
+    prompt_str_list = [str(graph_data_list[idx.item()]) for idx in indices[0][:k]]
+    graph_prompt = '\n'.join(prompt_str_list)
+
+    return code_prompt, graph_prompt
 
   
 if __name__ == '__main__':
