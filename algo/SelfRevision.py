@@ -46,6 +46,16 @@ def search_with_faiss(query, data_list, index, pca, k):
     prompt = '\n'.join(prompt_str_list)
     return prompt
 
+def return_idx(query, index, pca, k):
+    inputs = tokenizer.encode(query, return_tensors = "pt").to(device)
+    query_embed = model(inputs)[0]
+    query_embed = query_embed.cpu().detach().numpy() 
+
+    query_embed = np.expand_dims(query_embed, axis=0)
+    distances, indices = index.search(query_embed, k)
+
+    return indices[0][:k]
+
 def search_with_faiss_multi(query, code_data_list, graph_data_list, index, pca, k):
     inputs = tokenizer.encode(query, return_tensors = "pt").to(device)
     query_embed = model(inputs)[0]

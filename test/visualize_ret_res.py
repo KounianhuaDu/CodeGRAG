@@ -24,26 +24,10 @@ from collections import defaultdict
 
 #return_idx(query, index, pca, k)
 
-def build_index(problem, index, pca, k):
-    task = problem['prompt']
-    declaration = problem['declaration']
-    query = declaration
-    idxs = return_idx(query, index, pca, k)
-    return idxs
-
-def main(k, data_path, output_path):
-
-    embeddings_path = os.path.join(data_path, 'codes_emb.npy')
-    embeddings = np.load(embeddings_path)
-    index, pca = construct_faiss_index(embeddings)
-
-    index_dict = defaultdict(list)
-    for task_id in tqdm(problems):
-        idx = build_index(problems[task_id], index, pca, k)
-        index_dict[task_id] = idx
+def visualize(datapath):
+    with open(os.path.join(datapath, 'retrieval_idx.pkl'), 'rb') as f:
+        retrieval_idx = pkl.load(f)
     
-    with open(os.path.join(output_path, 'retrieval_idx.pkl'), 'wb') as f:
-        pkl.dump(index_dict, f)
     
 
 if __name__=="__main__":
