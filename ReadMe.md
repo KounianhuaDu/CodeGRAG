@@ -25,7 +25,11 @@ We use code-T5 to encode the codes. Under [`utils`](utils/) folder:
 python code_enc.py --path [codepath]
 ```
 
-- Sentence embedding
+## Model Weights
+You should first prepare model weights under model_weights/ folder. Following weights are included:
+- codet5p-110m-embedding
+- unixcoder-base-nine
+
 
 ## Run
 Under the [`test`](test/) folder:
