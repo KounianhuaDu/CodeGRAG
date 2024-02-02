@@ -45,6 +45,9 @@ python run_with_code.py --lang [programming_language] --output [your_output_path
 ```bash
 python run_with_graph.py --lang [programming_language] --output [your_output_path] --ret_method [retrieval_model] --datapath [retrieval_pool]
 ```
+Two result files are included:
+- cpp_results/samples_with_graph.jsonl
+- python_results/samples_with_graph.jsonl
 
 
 ### Multiple Round Generation
