@@ -3,8 +3,11 @@ import logging
 import os
 import openai
 
-API_KEY = "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"
-#API_KEY = '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'
+#APEX
+#API_KEY = "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"
+
+#Huawei
+API_KEY = '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'
 openai.api_key = API_KEY
 logging.basicConfig(format='%(levelname)s %(asctime)s %(process)d %(message)s',level=logging.INFO)
 

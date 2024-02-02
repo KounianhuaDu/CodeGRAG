@@ -19,7 +19,6 @@ sys.path.append("..")
 from utils.config import *
 from utils.utils import *
 
-from algo.SelfRevision import construct_faiss_index, search_with_faiss
 import pickle as pkl
 
 def build_instruction(knowledge, question, language):
@@ -40,6 +39,7 @@ def generate_one_completion(language, problem, index, code_data_list, pca, k):
     knowledge_code = search_with_faiss(query, code_data_list, index, pca, k)
 
     prompt_code = build_instruction(knowledge_code, task, language)
+    prompt_code = prompt_code[:3000]
 
     code_response = openai.ChatCompletion.create(
         model='gpt-3.5-turbo',
@@ -109,10 +109,10 @@ def main(language, k, data_path, output_path):
 if __name__=="__main__":
     parser = argparse.ArgumentParser(description="Using different models to generate function")
     parser.add_argument("--model_name", default="gpt-3.5-turbo", help="test model")
-    
+    parser.add_argument("--ret_method", choices=['codet5','unixcoder'])
+
     parser.add_argument("--datapath", default="../data/Cgraphs", help="data path")
     parser.add_argument("--output", default="/home/knhdu/output/FinalVersion", help="output path")
-    parser.add_argument("--value", choices=['raw_code','graph'])
     parser.add_argument("--lang", choices=['c++','python','java'])
     
     parser.add_argument('--gpu', type=int, default=0, help='Set GPU Ids : Eg: For CPU = -1, For Single GPU = 0')
@@ -130,6 +130,11 @@ if __name__=="__main__":
         problem_file = '../data/humaneval-x/cpp/data/humaneval_cpp.jsonl.gz'
     elif args.lang == 'java':
         problem_file = '../data/humaneval-x/java/data/humaneval_java.jsonl.gz'
+    
+    if args.ret_method == 'codet5':
+        from algo.Search_with_CodeT5 import construct_faiss_index, search_with_faiss
+    elif args.ret_method == 'unixcoder':
+        from algo.Search_with_UnixCoder import construct_faiss_index, search_with_faiss
     
     problems = defaultdict(dict)
     with gzip.open(problem_file, 'rb') as f:

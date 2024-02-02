@@ -5,10 +5,15 @@ languge_settings = {
         'full_name': 'Python',
         'indent': 4,
     },
-    'cpp': {
+    'c++': {
         'full_name': 'cpp',
         'indent': 0,
         'main': "int main()",
+    },
+    'java': {
+        'full_name': 'Java',
+        'indent': 4,
+        'main': "public static void main",
     }
 }
 
@@ -25,38 +30,50 @@ def get_function_name(question: str, lang: str):
     func_prefix = "\n".join(func_lines[:-1])
     return func_name, func_prefix
 
-def extract_generation_code(example: str, lang_code: str, verbose: bool=False):
-    task_id = example['task_id']
-    output = example.get('output')
-
-    question = example["prompt"].strip()
+def extract_generation_code(task_id, output, question, lang_code):
     setting = languge_settings[lang_code]
     lang = setting['full_name']
     indent = setting['indent']
 
     try:
-        code_block: str = re.findall(f'```{lang.lower()}\n(.*?)```', output, re.DOTALL | re.IGNORECASE)[0]
-
-        if verbose:
-            print(">>> Task: {}\n{}".format(task_id, code_block))
+        code_block: str = re.findall(f'```(.*?)```', output, re.DOTALL | re.IGNORECASE)[0]
         
         # Remove main
         if setting.get('main', None) and setting['main'] in code_block:
             main_start = code_block.index(setting['main'])
             code_block = code_block[:main_start]
         
-        #func_name, func_prefix = get_function_name(question, lang)
-        code_block = code_block.split('\n')[1:]
-        body = '\n'.join(code_block)
-        example['generation'] = body
+        func_name, func_prefix = get_function_name(question, lang)
+
+        try:
+            start = code_block.lower().index(func_name.lower())
+            indent = 0
+            while start - indent >= 0 and code_block[start - indent-1] == ' ':
+                indent += 1
+            
+            try:
+                end = code_block.rindex('\n' + ' '*indent + '}')
+            except:
+                end = len(code_block)
+        except:
+            start = 0
+            try:
+                end = code_block.rindex('\n' + ' '*indent + '}')
+            except:
+                end = len(code_block)
+
+        body = code_block[start:end] + '\n}'
+    
+        generation = body
+        
 
     except Exception as ex:
         print("Failed to extract code block with error `{}`:\n>>> Task: {}\n>>> Output:\n{}".format(
             ex, task_id, output
         ))
-        example['generation'] = example['prompt'] + '\n' + output
+        generation = question + '\n' + output
     
-    return example
+    return generation
 
 def cleanup_code(
     code: str,

@@ -31,12 +31,28 @@ You can refer to the above knowledge to do the completion. The problem:
 {}
 '''.strip().format(language, knowledge, question.strip())
 
+def get_codes(name, root_path):
 
-def generate_one_completion(language, problem, index, graph_data_list, pca, k):
+    file_name = os.path.join(root_path, name+'.py')
+    if os.path.exists(file_name):
+        file = open(file_name, "r")
+        content = file.read()
+    else:
+        content = None
+    return content
+
+def generate_one_completion(iterpath, language, problem, index, graph_data_list, pca, k):
     task = problem['prompt']
     declaration = problem['declaration']
 
-    query = declaration
+    id_index = problem['task_id']
+    id_index = id_index[:6] + '_' + id_index[7:] 
+
+    query = get_codes(id_index, iterpath)
+    if not query:
+        query = declaration
+
+
     knowledge_graph = search_with_faiss(query, graph_data_list, index, pca, k)
 
     prompt_graph = build_instruction(knowledge_graph, task, language)
@@ -52,7 +68,7 @@ def generate_one_completion(language, problem, index, graph_data_list, pca, k):
     graph_code = extract_function_body(graph_message, language)
     return graph_code
 
-def main(language, k, data_path, output_path):
+def main(iterpath, language, k, data_path, output_path):
 
     embeddings_path = os.path.join(data_path, 'codes_emb.npy')
     embeddings = np.load(embeddings_path)
@@ -86,7 +102,7 @@ def main(language, k, data_path, output_path):
                 if int(task_id[shift:]) < int(start_task_id):
                     continue
                 else:
-                    completion_with_graph = generate_one_completion(language, problems[task_id], index, graph_data_list, pca, k)
+                    completion_with_graph = generate_one_completion(iterpath, language, problems[task_id], index, graph_data_list, pca, k)
                     graph_temp_dict = dict(task_id=task_id, generation=completion_with_graph, prompt=problems[task_id]["prompt"], test=problems[task_id]["test"], declaration=problems[task_id]["declaration"])
                     
                     samples.append(graph_temp_dict)
@@ -111,7 +127,8 @@ if __name__=="__main__":
     parser.add_argument("--model_name", default="gpt-3.5-turbo", help="test model")
     parser.add_argument("--ret_method", choices=['codet5','unixcoder'])
     
-    parser.add_argument("--datapath", default="../data/Cgraphs", help="data path")
+    parser.add_argument("--datapath", default="../data/FinalData/LongCodes", help="data path")
+    parser.add_argument("--iterpath", default="../data/Cgraphs", help="data path")
     parser.add_argument("--output", default="/home/knhdu/output/FinalVersion", help="output path")
     parser.add_argument("--value", choices=['raw_code','graph'])
     parser.add_argument("--lang", choices=['c++','python','java'])
@@ -143,5 +160,5 @@ if __name__=="__main__":
             line = eval(line)
             problems[line['task_id']] = line
 
-    main(args.lang, args.k, args.datapath, args.output)
+    main(args.iterpath, args.lang, args.k, args.datapath, args.output)
 

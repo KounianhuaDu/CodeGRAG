@@ -3,11 +3,20 @@ import os
 import argparse
 from tqdm import tqdm
 
-def extract_code(path, line):
+'''def extract_code(path, line):
     code_name = line['task_id'][4:]
     code_name = 'CPP_' + code_name
     code_content = line['declaration'] + line['generation']
     filename = os.path.join(path, code_name+'.cpp')
+    file = open(filename, "w")
+    file.write(code_content)
+    file.close()'''
+
+def extract_code(path, line):
+    code_name = line['task_id'][7:]
+    code_name = 'Python_' + code_name
+    code_content = line['declaration'] + line['generation']
+    filename = os.path.join(path, code_name+'.py')
     file = open(filename, "w")
     file.write(code_content)
     file.close()
