@@ -33,8 +33,15 @@ Under the [`test`](test/) folder:
 ### Single Round Direct Prompt
 For one round generation, please run:
 ```bash
-python run_raw.py --output [your_output_path]
+python run_raw_multilingual.py --lang [programming_language] --output [your_output_path]
 ```
+```bash
+python run_with_code.py --lang [programming_language] --output [your_output_path] --ret_method [retrieval_model] --datapath [retrieval_pool]
+```
+```bash
+python run_with_graph.py --lang [programming_language] --output [your_output_path] --ret_method [retrieval_model] --datapath [retrieval_pool]
+```
+
 
 ### Multiple Round Generation
 
