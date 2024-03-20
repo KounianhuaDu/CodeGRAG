@@ -5,16 +5,15 @@ This is the repo for Graph Syntax RAG.
 ## Requirements
 
 ## Data Preparation
+For C++ codes:
 - AST/CFG/GraphView
-For ast/cfg/graph_view, under the [`mvg`](mvg/) folder, run:
+Under the [`mvg`](mvg/) folder, run:
 ```bash
-python getCFG.py --rootpath /home/knhdu/ext0/CodeRAG/output/OneRound/ --astpath astpath/ --cfgpath cfgpath/
+sh run_ast_cfg_graph.sh
 ```
-```bash
-python call_graphGen.py --writepath ./graph --astpath ./astpath/ --cfgpath ./cfgpath/ --picky 0
-```
+
 - Build DGL Graph
-Under utils folder:
+Under [`utils`](utils/) folder:
 ```bash
 python build_graph.py
 ```

@@ -38,14 +38,13 @@ def generate_one_completion(language, problem, index, graph_data_list, pca, k):
     declaration = problem['declaration']
 
     query = declaration
+    
     if language == 'python':
         nl = nls[int(task_id[7:])]
         query = nl + '\n' + query
 
     knowledge_graph = search_with_faiss(query, graph_data_list, index, pca, k)
-    
-    # if the retrieval pool is python for cpp, please uncomment this line.
-    knowledge_graph = knowledge_graph.split('metagraph')[0] + ')'
+    knowledge_graph = 'metagraph='+knowledge_graph[:2000]
  
     prompt_graph = build_instruction(knowledge_graph, task, language)
 
@@ -68,16 +67,10 @@ def main(args, language, k, data_path, output_path):
     
     embeddings = np.load(embeddings_path)
 
-    print('Embeddings loaded.')
-
-    with open(os.path.join(data_path, 'graphs.pkl'), 'rb') as f:
+    with open(os.path.join(data_path, f'{args.meta}_graphs.pkl'), 'rb') as f:
         graph_data_list = pkl.load(f)
 
-    print('Graphs loaded.')
-
     index, pca = construct_faiss_index(embeddings)
-
-    print('Index Constructed.')
 
     if language == 'python':
         shift = 7
@@ -132,6 +125,7 @@ if __name__=="__main__":
     parser.add_argument("--output", default="/home/knhdu/output/FinalVersion", help="output path")
     parser.add_argument("--value", choices=['raw_code','graph'])
     parser.add_argument("--lang", choices=['c++','python','java'])
+    parser.add_argument("--meta", choices=['type','kind','name','etype'])
 
     parser.add_argument('--gpu', type=int, default=0, help='Set GPU Ids : Eg: For CPU = -1, For Single GPU = 0')
     parser.add_argument('--seed', default=1, type=int)
@@ -162,11 +156,8 @@ if __name__=="__main__":
             line = eval(line)
             problems[line['task_id']] = line
     
-    print('Problems loaded.')
-    
     with open('../data/humaneval-x/python/data/nl.pkl', 'rb') as f:
         nls = pkl.load(f)
 
-    print('NLs loaded.')
     main(args, args.lang, args.k, args.datapath, args.output)
 

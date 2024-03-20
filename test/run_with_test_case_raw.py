@@ -21,33 +21,50 @@ from utils.utils import *
 
 import pickle as pkl
 
-def build_instruction(knowledge, question, language):
+def build_instruction(question, test_cases, language):
     return '''
 Please continue to complete the {} function according to the requirements and function declarations. You are not allowed to modify the given code and do the completion only.\n
-The syntax graph of a similar code might be:\n
+The test cases of the problem might contain:\n
 {}
-You can refer to the above knowledge to do the completion. The problem:
+\n You can refer to the above test cases to do the completion to ensure its robustness and reliability. The problem:
 \n
 {}
-'''.strip().format(language, knowledge, question.strip())
+'''.strip().format(language, test_cases, question.strip())
 
+def build_test_case(question, language):
+    return '''
+As a tester, your task is to create comprehensive test cases for the incomplete {}
+function. These test cases should encompass Basic, Edge, and Large Scale scenarios to ensure the code's
+robustness, reliability, and scalability.\n
+**1. Basic Test Cases**:\n
+- **Objective**: To verify the fundamental functionality of the {} function under normal
+conditions.\n
+**2. Edge Test Cases**:\n
+- **Objective**: To evaluate the function's behavior under extreme or unusual conditions.\n
+**3. Large Scale Test Cases**:\n
+- **Objective**: To assess the function’s performance and scalability with large data samples.
+
+The input code problem is:
+\n
+{}
+'''.strip().format(language, language, question.strip())
 
 def generate_one_completion(language, problem, index, graph_data_list, pca, k):
     task = problem['prompt']
-    task_id = problem['task_id']
     declaration = problem['declaration']
 
     query = declaration
-    if language == 'python':
-        nl = nls[int(task_id[7:])]
-        query = nl + '\n' + query
-
-    knowledge_graph = search_with_faiss(query, graph_data_list, index, pca, k)
     
-    # if the retrieval pool is python for cpp, please uncomment this line.
-    knowledge_graph = knowledge_graph.split('metagraph')[0] + ')'
- 
-    prompt_graph = build_instruction(knowledge_graph, task, language)
+    test_cases_prompt = build_test_case(task, language)
+    test_cases = openai.ChatCompletion.create(
+        model='gpt-3.5-turbo',
+        messages=[{"role": "user", "content": test_cases_prompt}],
+        max_tokens=1024,  # 调整生成文本的长度
+        temperature=0.0,  # 调整生成文本的随机性
+        top_p=0.0,
+    )
+    test_cases = test_cases.choices[0]["message"]["content"]
+    prompt_graph = build_instruction(task, test_cases, language)
 
     graph_response = openai.ChatCompletion.create(
         model='gpt-3.5-turbo',
@@ -60,24 +77,15 @@ def generate_one_completion(language, problem, index, graph_data_list, pca, k):
     graph_code = extract_function_body(graph_message, language)
     return graph_code
 
-def main(args, language, k, data_path, output_path):
-    if args.ret_method == 'gnn':
-        embeddings_path = os.path.join(data_path, 'graphs_emb.npy')
-    else:
-        embeddings_path = os.path.join(data_path, 'codes_emb.npy')
-    
-    embeddings = np.load(embeddings_path)
+def main(language, k, data_path, output_path):
 
-    print('Embeddings loaded.')
+    embeddings_path = os.path.join(data_path, 'codes_emb.npy')
+    embeddings = np.load(embeddings_path)
 
     with open(os.path.join(data_path, 'graphs.pkl'), 'rb') as f:
         graph_data_list = pkl.load(f)
 
-    print('Graphs loaded.')
-
     index, pca = construct_faiss_index(embeddings)
-
-    print('Index Constructed.')
 
     if language == 'python':
         shift = 7
@@ -126,7 +134,7 @@ def main(args, language, k, data_path, output_path):
 if __name__=="__main__":
     parser = argparse.ArgumentParser(description="Using different models to generate function")
     parser.add_argument("--model_name", default="gpt-3.5-turbo", help="test model")
-    parser.add_argument("--ret_method", choices=['codet5','unixcoder', 'gnn'])
+    parser.add_argument("--ret_method", choices=['codet5','unixcoder'])
     
     parser.add_argument("--datapath", default="../data/Cgraphs", help="data path")
     parser.add_argument("--output", default="/home/knhdu/output/FinalVersion", help="output path")
@@ -153,20 +161,12 @@ if __name__=="__main__":
         from algo.Search_with_CodeT5 import construct_faiss_index, search_with_faiss
     elif args.ret_method == 'unixcoder':
         from algo.Search_with_UnixCoder import construct_faiss_index, search_with_faiss
-    elif args.ret_method == 'gnn':
-        from algo.Search_with_CodeT5 import construct_faiss_index, search_with_faiss
     
     problems = defaultdict(dict)
     with gzip.open(problem_file, 'rb') as f:
         for line in f:
             line = eval(line)
             problems[line['task_id']] = line
-    
-    print('Problems loaded.')
-    
-    with open('../data/humaneval-x/python/data/nl.pkl', 'rb') as f:
-        nls = pkl.load(f)
 
-    print('NLs loaded.')
-    main(args, args.lang, args.k, args.datapath, args.output)
+    main(args.lang, args.k, args.datapath, args.output)
 

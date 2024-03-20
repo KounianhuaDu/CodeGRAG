@@ -45,8 +45,6 @@ def search_with_faiss(query, data_list, index, pca, k):
         tokens_embeddings, query_embed = model(source_ids)
 
     query_embed = query_embed.cpu().detach().numpy() 
-    #query_embed = pca.apply(query_embed)
-    #query_embed = preprocessing.normalize(query_embed, 'l2')
     
     distances, indices = index.search(query_embed, k)
 

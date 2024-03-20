@@ -4,10 +4,10 @@ import os
 import openai
 
 #APEX
-#API_KEY = "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"
+API_KEY = "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"
 
 #Huawei
-API_KEY = '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'
+#API_KEY = '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'
 openai.api_key = API_KEY
 logging.basicConfig(format='%(levelname)s %(asctime)s %(process)d %(message)s',level=logging.INFO)
 
