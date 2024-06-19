@@ -14,8 +14,8 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 checkpoint = "../model_weights/codet5p-110m-embedding"
 device = "cuda"  # for GPU usage or "cpu" for CPU usage
 
-tokenizer = AutoTokenizer.from_pretrained(checkpoint, trust_remote_code=True)
-model = AutoModel.from_pretrained(checkpoint, trust_remote_code=True).to(device)
+'''tokenizer = AutoTokenizer.from_pretrained(checkpoint, trust_remote_code=True)
+model = AutoModel.from_pretrained(checkpoint, trust_remote_code=True).to(device)'''
 
 def build_graph(path, label_map):
     with open(path, 'rb') as f:
@@ -68,7 +68,7 @@ def build_graph(path, label_map):
         node_types.append(node_info['type'])
     
 
-    kinds = tokenizer(node_kinds, padding='longest', truncation=True, return_tensors='pt').to(device)
+    '''kinds = tokenizer(node_kinds, padding='longest', truncation=True, return_tensors='pt').to(device)
     with torch.no_grad():
         kinds = model(**kinds)
     
@@ -80,7 +80,7 @@ def build_graph(path, label_map):
     kinds = kinds.cpu()
     types = types.cpu()
     g.nodes['node'].data['kind'] = kinds
-    g.nodes['node'].data['type'] = types
+    g.nodes['node'].data['type'] = types'''
     
     return g, label, name
 
@@ -93,7 +93,7 @@ def get_codes(name, root_path):
     return content
 
 def process_data(data_path, label_path, output_path):
-    graph_path = os.path.join(data_path, 'graph')
+    graph_path = os.path.join(data_path, 'graphs')
     graph_files = [os.path.join(graph_path, file) for file in os.listdir(graph_path)]
     
     if label_path:
@@ -110,26 +110,26 @@ def process_data(data_path, label_path, output_path):
         g, label, name = build_graph(file, label_map)
         if not g:
             continue
-        code = get_codes(name, os.path.join(data_path, 'code'))
-        if not code:
-            continue
+        #code = get_codes(name, os.path.join(data_path, 'code'))
+        #if not code:
+        #    continue
         graph_lists.append(g)
         if label:
             label_lists.append(label)
-        code_lists.append(code)
-        name_lists.append(name)
+        #code_lists.append(code)
+        #name_lists.append(name)
 
-    print(len(code_lists))
+    #print(len(code_lists))
     os.makedirs(output_path, exist_ok=True)
     with open(os.path.join(output_path, 'graphs.pkl'), 'wb') as f:
         pkl.dump(graph_lists, f)
-    if label:
-        with open(os.path.join(output_path, 'labels.pkl'), 'wb') as f:
-            pkl.dump(label_lists, f)
-    with open(os.path.join(output_path, 'codes.pkl'), 'wb') as f:
-        pkl.dump(code_lists, f)
-    with open(os.path.join(output_path, 'names.pkl'), 'wb') as f:
-        pkl.dump(name_lists, f)
+    #if label:
+    #    with open(os.path.join(output_path, 'labels.pkl'), 'wb') as f:
+    #        pkl.dump(label_lists, f)
+    #with open(os.path.join(output_path, 'codes.pkl'), 'wb') as f:
+    #    pkl.dump(code_lists, f)
+    #with open(os.path.join(output_path, 'names.pkl'), 'wb') as f:
+    #    pkl.dump(name_lists, f)
      
 if __name__=="__main__":
     parser = argparse.ArgumentParser(description="Using different models to generate function")

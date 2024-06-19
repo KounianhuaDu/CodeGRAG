@@ -1,7 +1,9 @@
 import ast
 import pandas as pd
 import pickle
-
+import os
+import pickle as pkl
+from extract_cfg import *
 
 class DataFlowNode:
     def __init__(self, node_id, name, kind):
@@ -131,20 +133,28 @@ def build_dfg_from_code(code):
         return None
 
 if __name__ == "__main__":
-    df = pd.read_parquet("dataset.parquet")
-    python_codes = df['output'].tolist()
-    print(len(python_codes))
-    available_codes = []
-    for i, code in enumerate(python_codes):
+    code_path = os.path.join('../data/transcode/pyth')
+    code_files = os.listdir(code_path)
+    for file in code_files:
+        file_name = open(os.path.join(code_path, file), "r")
+        code = file_name.read()
+        #df = pd.read_parquet("dataset.parquet")
+        #python_codes = df['output'].tolist()
+        #print(len(python_codes))
+        #available_codes = []
+        #for i, code in enumerate(python_codes):
         dfg = build_dfg_from_code(code)
-        if dfg is not None:
-            available_codes.append(code)
-            nodes, edges = dfg
-            graph = [nodes, edges, "code_"+str(i)]   
-            with open("graph_dfg/code_"+str(i)+".pkl", "wb") as file:
-                 pickle.dump(graph, file, protocol=4)
-    print(len(available_codes))
-    with open("available_codes_dfg.pkl", "wb") as file:
-         pickle.dump(available_codes, file, protocol=4)
+        if dfg:
+            with open(os.path.join('../data/humaneval_python_graphs/raw', file[:-3]+'.pkl'), 'wb') as f:
+                pkl.dump(dfg, f)
+        #if dfg is not None:
+            #available_codes.append(code)
+            #nodes, edges = dfg
+            #graph = [nodes, edges, "code_"+str(i)]   
+            #with open("graph_dfg/code_"+str(i)+".pkl", "wb") as file:
+                 #pickle.dump(graph, file, protocol=4)
+    #print(len(available_codes))
+    #with open("available_codes_dfg.pkl", "wb") as file:
+    #     pickle.dump(available_codes, file, protocol=4)
             
         

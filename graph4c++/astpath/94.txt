@@ -1,0 +1,3020 @@
+{
+"kind":"fileAST",
+"inner":[
+{
+  "id": "0x56126bc5c180",
+  "kind": "FunctionDecl",
+  "loc": {
+    "file": "/ext0/knhdu/CodeRAG/data/transcode/codes/94.cpp",
+    "line": 8,
+    "col": 5,
+    "tokLen": 9
+  },
+  "range": {
+    "begin": {
+      "col": 1,
+      "tokLen": 3
+    },
+    "end": {
+      "line": 24,
+      "col": 1,
+      "tokLen": 1
+    }
+  },
+  "name": "skjkasdkd",
+  "type": {
+    "qualType": "int (vector<int>)"
+  },
+  "inner": [
+    {
+      "id": "0x56126bc5c080",
+      "kind": "ParmVarDecl",
+      "loc": {
+        "line": 8,
+        "col": 27,
+        "tokLen": 3
+      },
+      "range": {
+        "begin": {
+          "col": 15,
+          "tokLen": 6
+        },
+        "end": {
+          "col": 27,
+          "tokLen": 3
+        }
+      },
+      "isUsed": true,
+      "name": "lst",
+      "type": {
+        "desugaredQualType": "std::vector<int, std::allocator<int> >",
+        "qualType": "vector<int>"
+      }
+    },
+    {
+      "id": "0x56126bc8eb58",
+      "kind": "CompoundStmt",
+      "range": {
+        "begin": {
+          "col": 31,
+          "tokLen": 1
+        },
+        "end": {
+          "line": 24,
+          "col": 1,
+          "tokLen": 1
+        }
+      },
+      "inner": [
+        {
+          "id": "0x56126bc89fb0",
+          "kind": "DeclStmt",
+          "range": {
+            "begin": {
+              "line": 9,
+              "col": 5,
+              "tokLen": 3
+            },
+            "end": {
+              "col": 18,
+              "tokLen": 1
+            }
+          },
+          "inner": [
+            {
+              "id": "0x56126bc89f28",
+              "kind": "VarDecl",
+              "loc": {
+                "col": 9,
+                "tokLen": 7
+              },
+              "range": {
+                "begin": {
+                  "col": 5,
+                  "tokLen": 3
+                },
+                "end": {
+                  "col": 17,
+                  "tokLen": 1
+                }
+              },
+              "isUsed": true,
+              "name": "largest",
+              "type": {
+                "qualType": "int"
+              },
+              "init": "c",
+              "inner": [
+                {
+                  "id": "0x56126bc89f90",
+                  "kind": "IntegerLiteral",
+                  "range": {
+                    "begin": {
+                      "col": 17,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 17,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "rvalue",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "0x56126bc8aae8",
+          "kind": "ForStmt",
+          "range": {
+            "begin": {
+              "line": 10,
+              "col": 5,
+              "tokLen": 3
+            },
+            "end": {
+              "line": 17,
+              "col": 9,
+              "tokLen": 1
+            }
+          },
+          "inner": [
+            {
+              "id": "0x56126bc8a068",
+              "kind": "DeclStmt",
+              "range": {
+                "begin": {
+                  "line": 10,
+                  "col": 10,
+                  "tokLen": 3
+                },
+                "end": {
+                  "col": 17,
+                  "tokLen": 1
+                }
+              },
+              "inner": [
+                {
+                  "id": "0x56126bc89fe0",
+                  "kind": "VarDecl",
+                  "loc": {
+                    "col": 14,
+                    "tokLen": 1
+                  },
+                  "range": {
+                    "begin": {
+                      "col": 10,
+                      "tokLen": 3
+                    },
+                    "end": {
+                      "col": 16,
+                      "tokLen": 1
+                    }
+                  },
+                  "isUsed": true,
+                  "name": "i",
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "init": "c",
+                  "inner": [
+                    {
+                      "id": "0x56126bc8a048",
+                      "kind": "IntegerLiteral",
+                      "range": {
+                        "begin": {
+                          "col": 16,
+                          "tokLen": 1
+                        },
+                        "end": {
+                          "col": 16,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "qualType": "int"
+                      },
+                      "valueCategory": "rvalue",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {},
+            {
+              "id": "0x56126bc8a180",
+              "kind": "BinaryOperator",
+              "range": {
+                "begin": {
+                  "col": 18,
+                  "tokLen": 1
+                },
+                "end": {
+                  "col": 29,
+                  "tokLen": 1
+                }
+              },
+              "type": {
+                "qualType": "bool"
+              },
+              "valueCategory": "rvalue",
+              "opcode": "<",
+              "inner": [
+                {
+                  "id": "0x56126bc8a168",
+                  "kind": "ImplicitCastExpr",
+                  "range": {
+                    "begin": {
+                      "col": 18,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 18,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "unsigned long"
+                  },
+                  "valueCategory": "rvalue",
+                  "castKind": "IntegralCast",
+                  "inner": [
+                    {
+                      "id": "0x56126bc8a150",
+                      "kind": "ImplicitCastExpr",
+                      "range": {
+                        "begin": {
+                          "col": 18,
+                          "tokLen": 1
+                        },
+                        "end": {
+                          "col": 18,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "qualType": "int"
+                      },
+                      "valueCategory": "rvalue",
+                      "castKind": "LValueToRValue",
+                      "inner": [
+                        {
+                          "id": "0x56126bc8a080",
+                          "kind": "DeclRefExpr",
+                          "range": {
+                            "begin": {
+                              "col": 18,
+                              "tokLen": 1
+                            },
+                            "end": {
+                              "col": 18,
+                              "tokLen": 1
+                            }
+                          },
+                          "type": {
+                            "qualType": "int"
+                          },
+                          "valueCategory": "lvalue",
+                          "referencedDecl": {
+                            "id": "0x56126bc89fe0",
+                            "kind": "VarDecl",
+                            "name": "i",
+                            "type": {
+                              "qualType": "int"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "0x56126bc8a0f0",
+                  "kind": "CXXMemberCallExpr",
+                  "range": {
+                    "begin": {
+                      "col": 20,
+                      "tokLen": 3
+                    },
+                    "end": {
+                      "col": 29,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "desugaredQualType": "unsigned long",
+                    "qualType": "std::vector::size_type"
+                  },
+                  "valueCategory": "rvalue",
+                  "inner": [
+                    {
+                      "id": "0x56126bc8a0c0",
+                      "kind": "MemberExpr",
+                      "range": {
+                        "begin": {
+                          "col": 20,
+                          "tokLen": 3
+                        },
+                        "end": {
+                          "col": 24,
+                          "tokLen": 4
+                        }
+                      },
+                      "type": {
+                        "qualType": "<bound member function type>"
+                      },
+                      "valueCategory": "rvalue",
+                      "name": "size",
+                      "isArrow": false,
+                      "referencedMemberDecl": "0x56126bc7f5b0",
+                      "inner": [
+                        {
+                          "id": "0x56126bc8a138",
+                          "kind": "ImplicitCastExpr",
+                          "range": {
+                            "begin": {
+                              "col": 20,
+                              "tokLen": 3
+                            },
+                            "end": {
+                              "col": 20,
+                              "tokLen": 3
+                            }
+                          },
+                          "type": {
+                            "qualType": "const std::vector<int, std::allocator<int> >"
+                          },
+                          "valueCategory": "lvalue",
+                          "castKind": "NoOp",
+                          "inner": [
+                            {
+                              "id": "0x56126bc8a0a0",
+                              "kind": "DeclRefExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 20,
+                                  "tokLen": 3
+                                },
+                                "end": {
+                                  "col": 20,
+                                  "tokLen": 3
+                                }
+                              },
+                              "type": {
+                                "desugaredQualType": "std::vector<int, std::allocator<int> >",
+                                "qualType": "vector<int>"
+                              },
+                              "valueCategory": "lvalue",
+                              "referencedDecl": {
+                                "id": "0x56126bc5c080",
+                                "kind": "ParmVarDecl",
+                                "name": "lst",
+                                "type": {
+                                  "desugaredQualType": "std::vector<int, std::allocator<int> >",
+                                  "qualType": "vector<int>"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "0x56126bc8a1c0",
+              "kind": "UnaryOperator",
+              "range": {
+                "begin": {
+                  "col": 31,
+                  "tokLen": 1
+                },
+                "end": {
+                  "col": 32,
+                  "tokLen": 2
+                }
+              },
+              "type": {
+                "qualType": "int"
+              },
+              "valueCategory": "rvalue",
+              "isPostfix": true,
+              "opcode": "++",
+              "inner": [
+                {
+                  "id": "0x56126bc8a1a0",
+                  "kind": "DeclRefExpr",
+                  "range": {
+                    "begin": {
+                      "col": 31,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 31,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "lvalue",
+                  "referencedDecl": {
+                    "id": "0x56126bc89fe0",
+                    "kind": "VarDecl",
+                    "name": "i",
+                    "type": {
+                      "qualType": "int"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "0x56126bc8aad0",
+              "kind": "IfStmt",
+              "range": {
+                "begin": {
+                  "line": 11,
+                  "col": 9,
+                  "tokLen": 2
+                },
+                "end": {
+                  "line": 17,
+                  "col": 9,
+                  "tokLen": 1
+                }
+              },
+              "inner": [
+                {
+                  "id": "0x56126bc8a398",
+                  "kind": "BinaryOperator",
+                  "range": {
+                    "begin": {
+                      "line": 11,
+                      "col": 13,
+                      "tokLen": 3
+                    },
+                    "end": {
+                      "col": 20,
+                      "tokLen": 7
+                    }
+                  },
+                  "type": {
+                    "qualType": "bool"
+                  },
+                  "valueCategory": "rvalue",
+                  "opcode": ">",
+                  "inner": [
+                    {
+                      "id": "0x56126bc8a368",
+                      "kind": "ImplicitCastExpr",
+                      "range": {
+                        "begin": {
+                          "col": 13,
+                          "tokLen": 3
+                        },
+                        "end": {
+                          "col": 18,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "desugaredQualType": "int",
+                        "qualType": "__gnu_cxx::__alloc_traits<std::allocator<int>, int>::value_type"
+                      },
+                      "valueCategory": "rvalue",
+                      "castKind": "LValueToRValue",
+                      "inner": [
+                        {
+                          "id": "0x56126bc8a310",
+                          "kind": "CXXOperatorCallExpr",
+                          "range": {
+                            "begin": {
+                              "col": 13,
+                              "tokLen": 3
+                            },
+                            "end": {
+                              "col": 18,
+                              "tokLen": 1
+                            }
+                          },
+                          "type": {
+                            "desugaredQualType": "int",
+                            "qualType": "__gnu_cxx::__alloc_traits<std::allocator<int>, int>::value_type"
+                          },
+                          "valueCategory": "lvalue",
+                          "inner": [
+                            {
+                              "id": "0x56126bc8a2f8",
+                              "kind": "ImplicitCastExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 16,
+                                  "tokLen": 1
+                                },
+                                "end": {
+                                  "col": 18,
+                                  "tokLen": 1
+                                }
+                              },
+                              "type": {
+                                "qualType": "std::vector<int, std::allocator<int> >::reference (*)(std::vector::size_type) noexcept"
+                              },
+                              "valueCategory": "rvalue",
+                              "castKind": "FunctionToPointerDecay",
+                              "inner": [
+                                {
+                                  "id": "0x56126bc8a278",
+                                  "kind": "DeclRefExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 16,
+                                      "tokLen": 1
+                                    },
+                                    "end": {
+                                      "col": 18,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "std::vector<int, std::allocator<int> >::reference (std::vector::size_type) noexcept"
+                                  },
+                                  "valueCategory": "lvalue",
+                                  "referencedDecl": {
+                                    "id": "0x56126bc7fea0",
+                                    "kind": "CXXMethodDecl",
+                                    "name": "operator[]",
+                                    "type": {
+                                      "qualType": "std::vector<int, std::allocator<int> >::reference (std::vector::size_type) noexcept"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "0x56126bc8a1d8",
+                              "kind": "DeclRefExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 13,
+                                  "tokLen": 3
+                                },
+                                "end": {
+                                  "col": 13,
+                                  "tokLen": 3
+                                }
+                              },
+                              "type": {
+                                "desugaredQualType": "std::vector<int, std::allocator<int> >",
+                                "qualType": "vector<int>"
+                              },
+                              "valueCategory": "lvalue",
+                              "referencedDecl": {
+                                "id": "0x56126bc5c080",
+                                "kind": "ParmVarDecl",
+                                "name": "lst",
+                                "type": {
+                                  "desugaredQualType": "std::vector<int, std::allocator<int> >",
+                                  "qualType": "vector<int>"
+                                }
+                              }
+                            },
+                            {
+                              "id": "0x56126bc8a260",
+                              "kind": "ImplicitCastExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 17,
+                                  "tokLen": 1
+                                },
+                                "end": {
+                                  "col": 17,
+                                  "tokLen": 1
+                                }
+                              },
+                              "type": {
+                                "desugaredQualType": "unsigned long",
+                                "qualType": "std::vector::size_type"
+                              },
+                              "valueCategory": "rvalue",
+                              "castKind": "IntegralCast",
+                              "inner": [
+                                {
+                                  "id": "0x56126bc8a248",
+                                  "kind": "ImplicitCastExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 17,
+                                      "tokLen": 1
+                                    },
+                                    "end": {
+                                      "col": 17,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "int"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "castKind": "LValueToRValue",
+                                  "inner": [
+                                    {
+                                      "id": "0x56126bc8a1f8",
+                                      "kind": "DeclRefExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 17,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 17,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "int"
+                                      },
+                                      "valueCategory": "lvalue",
+                                      "referencedDecl": {
+                                        "id": "0x56126bc89fe0",
+                                        "kind": "VarDecl",
+                                        "name": "i",
+                                        "type": {
+                                          "qualType": "int"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0x56126bc8a380",
+                      "kind": "ImplicitCastExpr",
+                      "range": {
+                        "begin": {
+                          "col": 20,
+                          "tokLen": 7
+                        },
+                        "end": {
+                          "col": 20,
+                          "tokLen": 7
+                        }
+                      },
+                      "type": {
+                        "qualType": "int"
+                      },
+                      "valueCategory": "rvalue",
+                      "castKind": "LValueToRValue",
+                      "inner": [
+                        {
+                          "id": "0x56126bc8a348",
+                          "kind": "DeclRefExpr",
+                          "range": {
+                            "begin": {
+                              "col": 20,
+                              "tokLen": 7
+                            },
+                            "end": {
+                              "col": 20,
+                              "tokLen": 7
+                            }
+                          },
+                          "type": {
+                            "qualType": "int"
+                          },
+                          "valueCategory": "lvalue",
+                          "referencedDecl": {
+                            "id": "0x56126bc89f28",
+                            "kind": "VarDecl",
+                            "name": "largest",
+                            "type": {
+                              "qualType": "int"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "0x56126bc8aaa8",
+                  "kind": "CompoundStmt",
+                  "range": {
+                    "begin": {
+                      "line": 12,
+                      "col": 9,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "line": 17,
+                      "col": 9,
+                      "tokLen": 1
+                    }
+                  },
+                  "inner": [
+                    {
+                      "id": "0x56126bc8a440",
+                      "kind": "DeclStmt",
+                      "range": {
+                        "begin": {
+                          "line": 13,
+                          "col": 13,
+                          "tokLen": 4
+                        },
+                        "end": {
+                          "col": 28,
+                          "tokLen": 1
+                        }
+                      },
+                      "inner": [
+                        {
+                          "id": "0x56126bc8a3c8",
+                          "kind": "VarDecl",
+                          "loc": {
+                            "col": 18,
+                            "tokLen": 5
+                          },
+                          "range": {
+                            "begin": {
+                              "col": 13,
+                              "tokLen": 4
+                            },
+                            "end": {
+                              "col": 24,
+                              "tokLen": 4
+                            }
+                          },
+                          "isUsed": true,
+                          "name": "prime",
+                          "type": {
+                            "qualType": "bool"
+                          },
+                          "init": "c",
+                          "inner": [
+                            {
+                              "id": "0x56126bc8a430",
+                              "kind": "CXXBoolLiteralExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 24,
+                                  "tokLen": 4
+                                },
+                                "end": {
+                                  "col": 24,
+                                  "tokLen": 4
+                                }
+                              },
+                              "type": {
+                                "qualType": "bool"
+                              },
+                              "valueCategory": "rvalue",
+                              "value": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0x56126bc8a8e8",
+                      "kind": "ForStmt",
+                      "range": {
+                        "begin": {
+                          "line": 14,
+                          "col": 13,
+                          "tokLen": 3
+                        },
+                        "end": {
+                          "line": 15,
+                          "col": 40,
+                          "tokLen": 5
+                        }
+                      },
+                      "inner": [
+                        {
+                          "id": "0x56126bc8a4f8",
+                          "kind": "DeclStmt",
+                          "range": {
+                            "begin": {
+                              "line": 14,
+                              "col": 18,
+                              "tokLen": 3
+                            },
+                            "end": {
+                              "col": 25,
+                              "tokLen": 1
+                            }
+                          },
+                          "inner": [
+                            {
+                              "id": "0x56126bc8a470",
+                              "kind": "VarDecl",
+                              "loc": {
+                                "col": 22,
+                                "tokLen": 1
+                              },
+                              "range": {
+                                "begin": {
+                                  "col": 18,
+                                  "tokLen": 3
+                                },
+                                "end": {
+                                  "col": 24,
+                                  "tokLen": 1
+                                }
+                              },
+                              "isUsed": true,
+                              "name": "j",
+                              "type": {
+                                "qualType": "int"
+                              },
+                              "init": "c",
+                              "inner": [
+                                {
+                                  "id": "0x56126bc8a4d8",
+                                  "kind": "IntegerLiteral",
+                                  "range": {
+                                    "begin": {
+                                      "col": 24,
+                                      "tokLen": 1
+                                    },
+                                    "end": {
+                                      "col": 24,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "int"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "value": "2"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {},
+                        {
+                          "id": "0x56126bc8a698",
+                          "kind": "BinaryOperator",
+                          "range": {
+                            "begin": {
+                              "col": 26,
+                              "tokLen": 1
+                            },
+                            "end": {
+                              "col": 36,
+                              "tokLen": 1
+                            }
+                          },
+                          "type": {
+                            "qualType": "bool"
+                          },
+                          "valueCategory": "rvalue",
+                          "opcode": "<=",
+                          "inner": [
+                            {
+                              "id": "0x56126bc8a580",
+                              "kind": "BinaryOperator",
+                              "range": {
+                                "begin": {
+                                  "col": 26,
+                                  "tokLen": 1
+                                },
+                                "end": {
+                                  "col": 28,
+                                  "tokLen": 1
+                                }
+                              },
+                              "type": {
+                                "qualType": "int"
+                              },
+                              "valueCategory": "rvalue",
+                              "opcode": "*",
+                              "inner": [
+                                {
+                                  "id": "0x56126bc8a550",
+                                  "kind": "ImplicitCastExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 26,
+                                      "tokLen": 1
+                                    },
+                                    "end": {
+                                      "col": 26,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "int"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "castKind": "LValueToRValue",
+                                  "inner": [
+                                    {
+                                      "id": "0x56126bc8a510",
+                                      "kind": "DeclRefExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 26,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 26,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "int"
+                                      },
+                                      "valueCategory": "lvalue",
+                                      "referencedDecl": {
+                                        "id": "0x56126bc8a470",
+                                        "kind": "VarDecl",
+                                        "name": "j",
+                                        "type": {
+                                          "qualType": "int"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "0x56126bc8a568",
+                                  "kind": "ImplicitCastExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 28,
+                                      "tokLen": 1
+                                    },
+                                    "end": {
+                                      "col": 28,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "int"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "castKind": "LValueToRValue",
+                                  "inner": [
+                                    {
+                                      "id": "0x56126bc8a530",
+                                      "kind": "DeclRefExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 28,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 28,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "int"
+                                      },
+                                      "valueCategory": "lvalue",
+                                      "referencedDecl": {
+                                        "id": "0x56126bc8a470",
+                                        "kind": "VarDecl",
+                                        "name": "j",
+                                        "type": {
+                                          "qualType": "int"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "0x56126bc8a680",
+                              "kind": "ImplicitCastExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 31,
+                                  "tokLen": 3
+                                },
+                                "end": {
+                                  "col": 36,
+                                  "tokLen": 1
+                                }
+                              },
+                              "type": {
+                                "desugaredQualType": "int",
+                                "qualType": "__gnu_cxx::__alloc_traits<std::allocator<int>, int>::value_type"
+                              },
+                              "valueCategory": "rvalue",
+                              "castKind": "LValueToRValue",
+                              "inner": [
+                                {
+                                  "id": "0x56126bc8a648",
+                                  "kind": "CXXOperatorCallExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 31,
+                                      "tokLen": 3
+                                    },
+                                    "end": {
+                                      "col": 36,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "desugaredQualType": "int",
+                                    "qualType": "__gnu_cxx::__alloc_traits<std::allocator<int>, int>::value_type"
+                                  },
+                                  "valueCategory": "lvalue",
+                                  "inner": [
+                                    {
+                                      "id": "0x56126bc8a630",
+                                      "kind": "ImplicitCastExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 34,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 36,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "std::vector<int, std::allocator<int> >::reference (*)(std::vector::size_type) noexcept"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "castKind": "FunctionToPointerDecay",
+                                      "inner": [
+                                        {
+                                          "id": "0x56126bc8a610",
+                                          "kind": "DeclRefExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 34,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 36,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "std::vector<int, std::allocator<int> >::reference (std::vector::size_type) noexcept"
+                                          },
+                                          "valueCategory": "lvalue",
+                                          "referencedDecl": {
+                                            "id": "0x56126bc7fea0",
+                                            "kind": "CXXMethodDecl",
+                                            "name": "operator[]",
+                                            "type": {
+                                              "qualType": "std::vector<int, std::allocator<int> >::reference (std::vector::size_type) noexcept"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "0x56126bc8a5a0",
+                                      "kind": "DeclRefExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 31,
+                                          "tokLen": 3
+                                        },
+                                        "end": {
+                                          "col": 31,
+                                          "tokLen": 3
+                                        }
+                                      },
+                                      "type": {
+                                        "desugaredQualType": "std::vector<int, std::allocator<int> >",
+                                        "qualType": "vector<int>"
+                                      },
+                                      "valueCategory": "lvalue",
+                                      "referencedDecl": {
+                                        "id": "0x56126bc5c080",
+                                        "kind": "ParmVarDecl",
+                                        "name": "lst",
+                                        "type": {
+                                          "desugaredQualType": "std::vector<int, std::allocator<int> >",
+                                          "qualType": "vector<int>"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "id": "0x56126bc8a5f8",
+                                      "kind": "ImplicitCastExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 35,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 35,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "desugaredQualType": "unsigned long",
+                                        "qualType": "std::vector::size_type"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "castKind": "IntegralCast",
+                                      "inner": [
+                                        {
+                                          "id": "0x56126bc8a5e0",
+                                          "kind": "ImplicitCastExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 35,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 35,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "int"
+                                          },
+                                          "valueCategory": "rvalue",
+                                          "castKind": "LValueToRValue",
+                                          "inner": [
+                                            {
+                                              "id": "0x56126bc8a5c0",
+                                              "kind": "DeclRefExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 35,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 35,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "int"
+                                              },
+                                              "valueCategory": "lvalue",
+                                              "referencedDecl": {
+                                                "id": "0x56126bc89fe0",
+                                                "kind": "VarDecl",
+                                                "name": "i",
+                                                "type": {
+                                                  "qualType": "int"
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0x56126bc8a6d8",
+                          "kind": "UnaryOperator",
+                          "range": {
+                            "begin": {
+                              "col": 38,
+                              "tokLen": 1
+                            },
+                            "end": {
+                              "col": 39,
+                              "tokLen": 2
+                            }
+                          },
+                          "type": {
+                            "qualType": "int"
+                          },
+                          "valueCategory": "rvalue",
+                          "isPostfix": true,
+                          "opcode": "++",
+                          "inner": [
+                            {
+                              "id": "0x56126bc8a6b8",
+                              "kind": "DeclRefExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 38,
+                                  "tokLen": 1
+                                },
+                                "end": {
+                                  "col": 38,
+                                  "tokLen": 1
+                                }
+                              },
+                              "type": {
+                                "qualType": "int"
+                              },
+                              "valueCategory": "lvalue",
+                              "referencedDecl": {
+                                "id": "0x56126bc8a470",
+                                "kind": "VarDecl",
+                                "name": "j",
+                                "type": {
+                                  "qualType": "int"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0x56126bc8a8d0",
+                          "kind": "IfStmt",
+                          "range": {
+                            "begin": {
+                              "line": 15,
+                              "col": 17,
+                              "tokLen": 2
+                            },
+                            "end": {
+                              "col": 40,
+                              "tokLen": 5
+                            }
+                          },
+                          "inner": [
+                            {
+                              "id": "0x56126bc8a860",
+                              "kind": "BinaryOperator",
+                              "range": {
+                                "begin": {
+                                  "col": 21,
+                                  "tokLen": 3
+                                },
+                                "end": {
+                                  "col": 31,
+                                  "tokLen": 1
+                                }
+                              },
+                              "type": {
+                                "qualType": "bool"
+                              },
+                              "valueCategory": "rvalue",
+                              "opcode": "==",
+                              "inner": [
+                                {
+                                  "id": "0x56126bc8a820",
+                                  "kind": "BinaryOperator",
+                                  "range": {
+                                    "begin": {
+                                      "col": 21,
+                                      "tokLen": 3
+                                    },
+                                    "end": {
+                                      "col": 28,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "int"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "opcode": "%",
+                                  "inner": [
+                                    {
+                                      "id": "0x56126bc8a7f0",
+                                      "kind": "ImplicitCastExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 21,
+                                          "tokLen": 3
+                                        },
+                                        "end": {
+                                          "col": 26,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "desugaredQualType": "int",
+                                        "qualType": "__gnu_cxx::__alloc_traits<std::allocator<int>, int>::value_type"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "castKind": "LValueToRValue",
+                                      "inner": [
+                                        {
+                                          "id": "0x56126bc8a798",
+                                          "kind": "CXXOperatorCallExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 21,
+                                              "tokLen": 3
+                                            },
+                                            "end": {
+                                              "col": 26,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "desugaredQualType": "int",
+                                            "qualType": "__gnu_cxx::__alloc_traits<std::allocator<int>, int>::value_type"
+                                          },
+                                          "valueCategory": "lvalue",
+                                          "inner": [
+                                            {
+                                              "id": "0x56126bc8a780",
+                                              "kind": "ImplicitCastExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 24,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 26,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "std::vector<int, std::allocator<int> >::reference (*)(std::vector::size_type) noexcept"
+                                              },
+                                              "valueCategory": "rvalue",
+                                              "castKind": "FunctionToPointerDecay",
+                                              "inner": [
+                                                {
+                                                  "id": "0x56126bc8a760",
+                                                  "kind": "DeclRefExpr",
+                                                  "range": {
+                                                    "begin": {
+                                                      "col": 24,
+                                                      "tokLen": 1
+                                                    },
+                                                    "end": {
+                                                      "col": 26,
+                                                      "tokLen": 1
+                                                    }
+                                                  },
+                                                  "type": {
+                                                    "qualType": "std::vector<int, std::allocator<int> >::reference (std::vector::size_type) noexcept"
+                                                  },
+                                                  "valueCategory": "lvalue",
+                                                  "referencedDecl": {
+                                                    "id": "0x56126bc7fea0",
+                                                    "kind": "CXXMethodDecl",
+                                                    "name": "operator[]",
+                                                    "type": {
+                                                      "qualType": "std::vector<int, std::allocator<int> >::reference (std::vector::size_type) noexcept"
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "id": "0x56126bc8a6f0",
+                                              "kind": "DeclRefExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 21,
+                                                  "tokLen": 3
+                                                },
+                                                "end": {
+                                                  "col": 21,
+                                                  "tokLen": 3
+                                                }
+                                              },
+                                              "type": {
+                                                "desugaredQualType": "std::vector<int, std::allocator<int> >",
+                                                "qualType": "vector<int>"
+                                              },
+                                              "valueCategory": "lvalue",
+                                              "referencedDecl": {
+                                                "id": "0x56126bc5c080",
+                                                "kind": "ParmVarDecl",
+                                                "name": "lst",
+                                                "type": {
+                                                  "desugaredQualType": "std::vector<int, std::allocator<int> >",
+                                                  "qualType": "vector<int>"
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "id": "0x56126bc8a748",
+                                              "kind": "ImplicitCastExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 25,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 25,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "desugaredQualType": "unsigned long",
+                                                "qualType": "std::vector::size_type"
+                                              },
+                                              "valueCategory": "rvalue",
+                                              "castKind": "IntegralCast",
+                                              "inner": [
+                                                {
+                                                  "id": "0x56126bc8a730",
+                                                  "kind": "ImplicitCastExpr",
+                                                  "range": {
+                                                    "begin": {
+                                                      "col": 25,
+                                                      "tokLen": 1
+                                                    },
+                                                    "end": {
+                                                      "col": 25,
+                                                      "tokLen": 1
+                                                    }
+                                                  },
+                                                  "type": {
+                                                    "qualType": "int"
+                                                  },
+                                                  "valueCategory": "rvalue",
+                                                  "castKind": "LValueToRValue",
+                                                  "inner": [
+                                                    {
+                                                      "id": "0x56126bc8a710",
+                                                      "kind": "DeclRefExpr",
+                                                      "range": {
+                                                        "begin": {
+                                                          "col": 25,
+                                                          "tokLen": 1
+                                                        },
+                                                        "end": {
+                                                          "col": 25,
+                                                          "tokLen": 1
+                                                        }
+                                                      },
+                                                      "type": {
+                                                        "qualType": "int"
+                                                      },
+                                                      "valueCategory": "lvalue",
+                                                      "referencedDecl": {
+                                                        "id": "0x56126bc89fe0",
+                                                        "kind": "VarDecl",
+                                                        "name": "i",
+                                                        "type": {
+                                                          "qualType": "int"
+                                                        }
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "0x56126bc8a808",
+                                      "kind": "ImplicitCastExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 28,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 28,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "int"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "castKind": "LValueToRValue",
+                                      "inner": [
+                                        {
+                                          "id": "0x56126bc8a7d0",
+                                          "kind": "DeclRefExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 28,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 28,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "int"
+                                          },
+                                          "valueCategory": "lvalue",
+                                          "referencedDecl": {
+                                            "id": "0x56126bc8a470",
+                                            "kind": "VarDecl",
+                                            "name": "j",
+                                            "type": {
+                                              "qualType": "int"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "0x56126bc8a840",
+                                  "kind": "IntegerLiteral",
+                                  "range": {
+                                    "begin": {
+                                      "col": 31,
+                                      "tokLen": 1
+                                    },
+                                    "end": {
+                                      "col": 31,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "int"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "value": "0"
+                                }
+                              ]
+                            },
+                            {
+                              "id": "0x56126bc8a8b0",
+                              "kind": "BinaryOperator",
+                              "range": {
+                                "begin": {
+                                  "col": 34,
+                                  "tokLen": 5
+                                },
+                                "end": {
+                                  "col": 40,
+                                  "tokLen": 5
+                                }
+                              },
+                              "type": {
+                                "qualType": "bool"
+                              },
+                              "valueCategory": "lvalue",
+                              "opcode": "=",
+                              "inner": [
+                                {
+                                  "id": "0x56126bc8a880",
+                                  "kind": "DeclRefExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 34,
+                                      "tokLen": 5
+                                    },
+                                    "end": {
+                                      "col": 34,
+                                      "tokLen": 5
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "bool"
+                                  },
+                                  "valueCategory": "lvalue",
+                                  "referencedDecl": {
+                                    "id": "0x56126bc8a3c8",
+                                    "kind": "VarDecl",
+                                    "name": "prime",
+                                    "type": {
+                                      "qualType": "bool"
+                                    }
+                                  }
+                                },
+                                {
+                                  "id": "0x56126bc8a8a0",
+                                  "kind": "CXXBoolLiteralExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 40,
+                                      "tokLen": 5
+                                    },
+                                    "end": {
+                                      "col": 40,
+                                      "tokLen": 5
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "bool"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "value": false
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0x56126bc8aa90",
+                      "kind": "IfStmt",
+                      "range": {
+                        "begin": {
+                          "line": 16,
+                          "col": 13,
+                          "tokLen": 2
+                        },
+                        "end": {
+                          "col": 37,
+                          "tokLen": 1
+                        }
+                      },
+                      "inner": [
+                        {
+                          "id": "0x56126bc8a940",
+                          "kind": "ImplicitCastExpr",
+                          "range": {
+                            "begin": {
+                              "col": 17,
+                              "tokLen": 5
+                            },
+                            "end": {
+                              "col": 17,
+                              "tokLen": 5
+                            }
+                          },
+                          "type": {
+                            "qualType": "bool"
+                          },
+                          "valueCategory": "rvalue",
+                          "castKind": "LValueToRValue",
+                          "inner": [
+                            {
+                              "id": "0x56126bc8a920",
+                              "kind": "DeclRefExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 17,
+                                  "tokLen": 5
+                                },
+                                "end": {
+                                  "col": 17,
+                                  "tokLen": 5
+                                }
+                              },
+                              "type": {
+                                "qualType": "bool"
+                              },
+                              "valueCategory": "lvalue",
+                              "referencedDecl": {
+                                "id": "0x56126bc8a3c8",
+                                "kind": "VarDecl",
+                                "name": "prime",
+                                "type": {
+                                  "qualType": "bool"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0x56126bc8aa70",
+                          "kind": "BinaryOperator",
+                          "range": {
+                            "begin": {
+                              "col": 24,
+                              "tokLen": 7
+                            },
+                            "end": {
+                              "col": 37,
+                              "tokLen": 1
+                            }
+                          },
+                          "type": {
+                            "qualType": "int"
+                          },
+                          "valueCategory": "lvalue",
+                          "opcode": "=",
+                          "inner": [
+                            {
+                              "id": "0x56126bc8a958",
+                              "kind": "DeclRefExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 24,
+                                  "tokLen": 7
+                                },
+                                "end": {
+                                  "col": 24,
+                                  "tokLen": 7
+                                }
+                              },
+                              "type": {
+                                "qualType": "int"
+                              },
+                              "valueCategory": "lvalue",
+                              "referencedDecl": {
+                                "id": "0x56126bc89f28",
+                                "kind": "VarDecl",
+                                "name": "largest",
+                                "type": {
+                                  "qualType": "int"
+                                }
+                              }
+                            },
+                            {
+                              "id": "0x56126bc8aa58",
+                              "kind": "ImplicitCastExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 32,
+                                  "tokLen": 3
+                                },
+                                "end": {
+                                  "col": 37,
+                                  "tokLen": 1
+                                }
+                              },
+                              "type": {
+                                "desugaredQualType": "int",
+                                "qualType": "__gnu_cxx::__alloc_traits<std::allocator<int>, int>::value_type"
+                              },
+                              "valueCategory": "rvalue",
+                              "castKind": "LValueToRValue",
+                              "inner": [
+                                {
+                                  "id": "0x56126bc8aa20",
+                                  "kind": "CXXOperatorCallExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 32,
+                                      "tokLen": 3
+                                    },
+                                    "end": {
+                                      "col": 37,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "desugaredQualType": "int",
+                                    "qualType": "__gnu_cxx::__alloc_traits<std::allocator<int>, int>::value_type"
+                                  },
+                                  "valueCategory": "lvalue",
+                                  "inner": [
+                                    {
+                                      "id": "0x56126bc8aa08",
+                                      "kind": "ImplicitCastExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 35,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 37,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "std::vector<int, std::allocator<int> >::reference (*)(std::vector::size_type) noexcept"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "castKind": "FunctionToPointerDecay",
+                                      "inner": [
+                                        {
+                                          "id": "0x56126bc8a9e8",
+                                          "kind": "DeclRefExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 35,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 37,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "std::vector<int, std::allocator<int> >::reference (std::vector::size_type) noexcept"
+                                          },
+                                          "valueCategory": "lvalue",
+                                          "referencedDecl": {
+                                            "id": "0x56126bc7fea0",
+                                            "kind": "CXXMethodDecl",
+                                            "name": "operator[]",
+                                            "type": {
+                                              "qualType": "std::vector<int, std::allocator<int> >::reference (std::vector::size_type) noexcept"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "0x56126bc8a978",
+                                      "kind": "DeclRefExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 32,
+                                          "tokLen": 3
+                                        },
+                                        "end": {
+                                          "col": 32,
+                                          "tokLen": 3
+                                        }
+                                      },
+                                      "type": {
+                                        "desugaredQualType": "std::vector<int, std::allocator<int> >",
+                                        "qualType": "vector<int>"
+                                      },
+                                      "valueCategory": "lvalue",
+                                      "referencedDecl": {
+                                        "id": "0x56126bc5c080",
+                                        "kind": "ParmVarDecl",
+                                        "name": "lst",
+                                        "type": {
+                                          "desugaredQualType": "std::vector<int, std::allocator<int> >",
+                                          "qualType": "vector<int>"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "id": "0x56126bc8a9d0",
+                                      "kind": "ImplicitCastExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 36,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 36,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "desugaredQualType": "unsigned long",
+                                        "qualType": "std::vector::size_type"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "castKind": "IntegralCast",
+                                      "inner": [
+                                        {
+                                          "id": "0x56126bc8a9b8",
+                                          "kind": "ImplicitCastExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 36,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 36,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "int"
+                                          },
+                                          "valueCategory": "rvalue",
+                                          "castKind": "LValueToRValue",
+                                          "inner": [
+                                            {
+                                              "id": "0x56126bc8a998",
+                                              "kind": "DeclRefExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 36,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 36,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "int"
+                                              },
+                                              "valueCategory": "lvalue",
+                                              "referencedDecl": {
+                                                "id": "0x56126bc89fe0",
+                                                "kind": "VarDecl",
+                                                "name": "i",
+                                                "type": {
+                                                  "qualType": "int"
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "0x56126bc8abc0",
+          "kind": "DeclStmt",
+          "range": {
+            "begin": {
+              "line": 18,
+              "col": 5,
+              "tokLen": 3
+            },
+            "end": {
+              "col": 14,
+              "tokLen": 1
+            }
+          },
+          "inner": [
+            {
+              "id": "0x56126bc8ab38",
+              "kind": "VarDecl",
+              "loc": {
+                "col": 9,
+                "tokLen": 3
+              },
+              "range": {
+                "begin": {
+                  "col": 5,
+                  "tokLen": 3
+                },
+                "end": {
+                  "col": 13,
+                  "tokLen": 1
+                }
+              },
+              "isUsed": true,
+              "name": "sum",
+              "type": {
+                "qualType": "int"
+              },
+              "init": "c",
+              "inner": [
+                {
+                  "id": "0x56126bc8aba0",
+                  "kind": "IntegerLiteral",
+                  "range": {
+                    "begin": {
+                      "col": 13,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 13,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "rvalue",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "0x56126bc8e028",
+          "kind": "DeclStmt",
+          "range": {
+            "begin": {
+              "line": 19,
+              "col": 5,
+              "tokLen": 6
+            },
+            "end": {
+              "col": 13,
+              "tokLen": 1
+            }
+          },
+          "inner": [
+            {
+              "id": "0x56126bc8abe8",
+              "kind": "VarDecl",
+              "loc": {
+                "col": 12,
+                "tokLen": 1
+              },
+              "range": {
+                "begin": {
+                  "col": 5,
+                  "tokLen": 6
+                },
+                "end": {
+                  "col": 12,
+                  "tokLen": 1
+                }
+              },
+              "isUsed": true,
+              "name": "s",
+              "type": {
+                "desugaredQualType": "std::__cxx11::basic_string<char>",
+                "qualType": "std::string"
+              },
+              "init": "call",
+              "inner": [
+                {
+                  "id": "0x56126bc8e000",
+                  "kind": "CXXConstructExpr",
+                  "range": {
+                    "begin": {
+                      "col": 12,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 12,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "desugaredQualType": "std::__cxx11::basic_string<char>",
+                    "qualType": "std::string"
+                  },
+                  "valueCategory": "rvalue",
+                  "ctorType": {
+                    "qualType": "void () noexcept(is_nothrow_default_constructible<allocator<char> >::value)"
+                  },
+                  "hadMultipleCandidates": true,
+                  "constructionKind": "complete"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "0x56126bc8e6d8",
+          "kind": "ExprWithCleanups",
+          "range": {
+            "begin": {
+              "line": 20,
+              "col": 5,
+              "tokLen": 1
+            },
+            "end": {
+              "col": 24,
+              "tokLen": 1
+            }
+          },
+          "type": {
+            "qualType": "std::__cxx11::basic_string<char>"
+          },
+          "valueCategory": "lvalue",
+          "cleanupsHaveSideEffects": true,
+          "inner": [
+            {
+              "id": "0x56126bc8e6a0",
+              "kind": "CXXOperatorCallExpr",
+              "range": {
+                "begin": {
+                  "col": 5,
+                  "tokLen": 1
+                },
+                "end": {
+                  "col": 24,
+                  "tokLen": 1
+                }
+              },
+              "type": {
+                "qualType": "std::__cxx11::basic_string<char>"
+              },
+              "valueCategory": "lvalue",
+              "inner": [
+                {
+                  "id": "0x56126bc8e688",
+                  "kind": "ImplicitCastExpr",
+                  "range": {
+                    "begin": {
+                      "col": 6,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 6,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "std::__cxx11::basic_string<char> &(*)(std::__cxx11::basic_string<char> &&) noexcept(_Alloc_traits::_S_nothrow_move())"
+                  },
+                  "valueCategory": "rvalue",
+                  "castKind": "FunctionToPointerDecay",
+                  "inner": [
+                    {
+                      "id": "0x56126bc8e608",
+                      "kind": "DeclRefExpr",
+                      "range": {
+                        "begin": {
+                          "col": 6,
+                          "tokLen": 1
+                        },
+                        "end": {
+                          "col": 6,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "qualType": "std::__cxx11::basic_string<char> &(std::__cxx11::basic_string<char> &&) noexcept(_Alloc_traits::_S_nothrow_move())"
+                      },
+                      "valueCategory": "lvalue",
+                      "referencedDecl": {
+                        "id": "0x56126b9ba548",
+                        "kind": "CXXMethodDecl",
+                        "name": "operator=",
+                        "type": {
+                          "qualType": "std::__cxx11::basic_string<char> &(std::__cxx11::basic_string<char> &&) noexcept(_Alloc_traits::_S_nothrow_move())"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "0x56126bc8e040",
+                  "kind": "DeclRefExpr",
+                  "range": {
+                    "begin": {
+                      "col": 5,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 5,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "desugaredQualType": "std::__cxx11::basic_string<char>",
+                    "qualType": "std::string"
+                  },
+                  "valueCategory": "lvalue",
+                  "referencedDecl": {
+                    "id": "0x56126bc8abe8",
+                    "kind": "VarDecl",
+                    "name": "s",
+                    "type": {
+                      "desugaredQualType": "std::__cxx11::basic_string<char>",
+                      "qualType": "std::string"
+                    }
+                  }
+                },
+                {
+                  "id": "0x56126bc8e208",
+                  "kind": "MaterializeTemporaryExpr",
+                  "range": {
+                    "begin": {
+                      "col": 7,
+                      "tokLen": 9
+                    },
+                    "end": {
+                      "col": 24,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "desugaredQualType": "std::__cxx11::basic_string<char>",
+                    "qualType": "std::string"
+                  },
+                  "valueCategory": "xvalue",
+                  "storageDuration": "full expression",
+                  "inner": [
+                    {
+                      "id": "0x56126bc8e1e8",
+                      "kind": "CXXBindTemporaryExpr",
+                      "range": {
+                        "begin": {
+                          "col": 7,
+                          "tokLen": 9
+                        },
+                        "end": {
+                          "col": 24,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "desugaredQualType": "std::__cxx11::basic_string<char>",
+                        "qualType": "std::string"
+                      },
+                      "valueCategory": "rvalue",
+                      "temp": "0x56126bc8e1e0",
+                      "dtor": {
+                        "id": "0x56126b9b9e28",
+                        "kind": "CXXDestructorDecl",
+                        "name": "~basic_string",
+                        "type": {
+                          "qualType": "void () noexcept"
+                        }
+                      },
+                      "inner": [
+                        {
+                          "id": "0x56126bc8e1a0",
+                          "kind": "CallExpr",
+                          "range": {
+                            "begin": {
+                              "col": 7,
+                              "tokLen": 9
+                            },
+                            "end": {
+                              "col": 24,
+                              "tokLen": 1
+                            }
+                          },
+                          "type": {
+                            "desugaredQualType": "std::__cxx11::basic_string<char>",
+                            "qualType": "std::string"
+                          },
+                          "valueCategory": "rvalue",
+                          "inner": [
+                            {
+                              "id": "0x56126bc8e188",
+                              "kind": "ImplicitCastExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 7,
+                                  "tokLen": 9
+                                },
+                                "end": {
+                                  "col": 7,
+                                  "tokLen": 9
+                                }
+                              },
+                              "type": {
+                                "qualType": "std::string (*)(int)"
+                              },
+                              "valueCategory": "rvalue",
+                              "castKind": "FunctionToPointerDecay",
+                              "inner": [
+                                {
+                                  "id": "0x56126bc8e108",
+                                  "kind": "DeclRefExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 7,
+                                      "tokLen": 9
+                                    },
+                                    "end": {
+                                      "col": 7,
+                                      "tokLen": 9
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "std::string (int)"
+                                  },
+                                  "valueCategory": "lvalue",
+                                  "referencedDecl": {
+                                    "id": "0x56126b9d3208",
+                                    "kind": "FunctionDecl",
+                                    "name": "to_string",
+                                    "type": {
+                                      "qualType": "std::string (int)"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "0x56126bc8e1c8",
+                              "kind": "ImplicitCastExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 17,
+                                  "tokLen": 7
+                                },
+                                "end": {
+                                  "col": 17,
+                                  "tokLen": 7
+                                }
+                              },
+                              "type": {
+                                "qualType": "int"
+                              },
+                              "valueCategory": "rvalue",
+                              "castKind": "LValueToRValue",
+                              "inner": [
+                                {
+                                  "id": "0x56126bc8e0e8",
+                                  "kind": "DeclRefExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 17,
+                                      "tokLen": 7
+                                    },
+                                    "end": {
+                                      "col": 17,
+                                      "tokLen": 7
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "int"
+                                  },
+                                  "valueCategory": "lvalue",
+                                  "referencedDecl": {
+                                    "id": "0x56126bc89f28",
+                                    "kind": "VarDecl",
+                                    "name": "largest",
+                                    "type": {
+                                      "qualType": "int"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "0x56126bc8ead8",
+          "kind": "ForStmt",
+          "range": {
+            "begin": {
+              "line": 21,
+              "col": 5,
+              "tokLen": 3
+            },
+            "end": {
+              "line": 22,
+              "col": 19,
+              "tokLen": 2
+            }
+          },
+          "inner": [
+            {
+              "id": "0x56126bc8e790",
+              "kind": "DeclStmt",
+              "range": {
+                "begin": {
+                  "line": 21,
+                  "col": 10,
+                  "tokLen": 3
+                },
+                "end": {
+                  "col": 17,
+                  "tokLen": 1
+                }
+              },
+              "inner": [
+                {
+                  "id": "0x56126bc8e708",
+                  "kind": "VarDecl",
+                  "loc": {
+                    "col": 14,
+                    "tokLen": 1
+                  },
+                  "range": {
+                    "begin": {
+                      "col": 10,
+                      "tokLen": 3
+                    },
+                    "end": {
+                      "col": 16,
+                      "tokLen": 1
+                    }
+                  },
+                  "isUsed": true,
+                  "name": "i",
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "init": "c",
+                  "inner": [
+                    {
+                      "id": "0x56126bc8e770",
+                      "kind": "IntegerLiteral",
+                      "range": {
+                        "begin": {
+                          "col": 16,
+                          "tokLen": 1
+                        },
+                        "end": {
+                          "col": 16,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "qualType": "int"
+                      },
+                      "valueCategory": "rvalue",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {},
+            {
+              "id": "0x56126bc8e880",
+              "kind": "BinaryOperator",
+              "range": {
+                "begin": {
+                  "col": 18,
+                  "tokLen": 1
+                },
+                "end": {
+                  "col": 29,
+                  "tokLen": 1
+                }
+              },
+              "type": {
+                "qualType": "bool"
+              },
+              "valueCategory": "rvalue",
+              "opcode": "<",
+              "inner": [
+                {
+                  "id": "0x56126bc8e868",
+                  "kind": "ImplicitCastExpr",
+                  "range": {
+                    "begin": {
+                      "col": 18,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 18,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "unsigned long"
+                  },
+                  "valueCategory": "rvalue",
+                  "castKind": "IntegralCast",
+                  "inner": [
+                    {
+                      "id": "0x56126bc8e850",
+                      "kind": "ImplicitCastExpr",
+                      "range": {
+                        "begin": {
+                          "col": 18,
+                          "tokLen": 1
+                        },
+                        "end": {
+                          "col": 18,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "qualType": "int"
+                      },
+                      "valueCategory": "rvalue",
+                      "castKind": "LValueToRValue",
+                      "inner": [
+                        {
+                          "id": "0x56126bc8e7a8",
+                          "kind": "DeclRefExpr",
+                          "range": {
+                            "begin": {
+                              "col": 18,
+                              "tokLen": 1
+                            },
+                            "end": {
+                              "col": 18,
+                              "tokLen": 1
+                            }
+                          },
+                          "type": {
+                            "qualType": "int"
+                          },
+                          "valueCategory": "lvalue",
+                          "referencedDecl": {
+                            "id": "0x56126bc8e708",
+                            "kind": "VarDecl",
+                            "name": "i",
+                            "type": {
+                              "qualType": "int"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "0x56126bc8e818",
+                  "kind": "CXXMemberCallExpr",
+                  "range": {
+                    "begin": {
+                      "col": 20,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 29,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "desugaredQualType": "unsigned long",
+                    "qualType": "std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size_type"
+                  },
+                  "valueCategory": "rvalue",
+                  "inner": [
+                    {
+                      "id": "0x56126bc8e7e8",
+                      "kind": "MemberExpr",
+                      "range": {
+                        "begin": {
+                          "col": 20,
+                          "tokLen": 1
+                        },
+                        "end": {
+                          "col": 22,
+                          "tokLen": 6
+                        }
+                      },
+                      "type": {
+                        "qualType": "<bound member function type>"
+                      },
+                      "valueCategory": "rvalue",
+                      "name": "length",
+                      "isArrow": false,
+                      "referencedMemberDecl": "0x56126b9bb588",
+                      "inner": [
+                        {
+                          "id": "0x56126bc8e838",
+                          "kind": "ImplicitCastExpr",
+                          "range": {
+                            "begin": {
+                              "col": 20,
+                              "tokLen": 1
+                            },
+                            "end": {
+                              "col": 20,
+                              "tokLen": 1
+                            }
+                          },
+                          "type": {
+                            "qualType": "const std::__cxx11::basic_string<char>"
+                          },
+                          "valueCategory": "lvalue",
+                          "castKind": "NoOp",
+                          "inner": [
+                            {
+                              "id": "0x56126bc8e7c8",
+                              "kind": "DeclRefExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 20,
+                                  "tokLen": 1
+                                },
+                                "end": {
+                                  "col": 20,
+                                  "tokLen": 1
+                                }
+                              },
+                              "type": {
+                                "desugaredQualType": "std::__cxx11::basic_string<char>",
+                                "qualType": "std::string"
+                              },
+                              "valueCategory": "lvalue",
+                              "referencedDecl": {
+                                "id": "0x56126bc8abe8",
+                                "kind": "VarDecl",
+                                "name": "s",
+                                "type": {
+                                  "desugaredQualType": "std::__cxx11::basic_string<char>",
+                                  "qualType": "std::string"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "0x56126bc8e8c0",
+              "kind": "UnaryOperator",
+              "range": {
+                "begin": {
+                  "col": 31,
+                  "tokLen": 1
+                },
+                "end": {
+                  "col": 32,
+                  "tokLen": 2
+                }
+              },
+              "type": {
+                "qualType": "int"
+              },
+              "valueCategory": "rvalue",
+              "isPostfix": true,
+              "opcode": "++",
+              "inner": [
+                {
+                  "id": "0x56126bc8e8a0",
+                  "kind": "DeclRefExpr",
+                  "range": {
+                    "begin": {
+                      "col": 31,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 31,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "lvalue",
+                  "referencedDecl": {
+                    "id": "0x56126bc8e708",
+                    "kind": "VarDecl",
+                    "name": "i",
+                    "type": {
+                      "qualType": "int"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "0x56126bc8eaa8",
+              "kind": "CompoundAssignOperator",
+              "range": {
+                "begin": {
+                  "line": 22,
+                  "col": 9,
+                  "tokLen": 3
+                },
+                "end": {
+                  "col": 19,
+                  "tokLen": 2
+                }
+              },
+              "type": {
+                "qualType": "int"
+              },
+              "valueCategory": "lvalue",
+              "opcode": "+=",
+              "computeLHSType": {
+                "qualType": "int"
+              },
+              "computeResultType": {
+                "qualType": "int"
+              },
+              "inner": [
+                {
+                  "id": "0x56126bc8e8d8",
+                  "kind": "DeclRefExpr",
+                  "range": {
+                    "begin": {
+                      "col": 9,
+                      "tokLen": 3
+                    },
+                    "end": {
+                      "col": 9,
+                      "tokLen": 3
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "lvalue",
+                  "referencedDecl": {
+                    "id": "0x56126bc8ab38",
+                    "kind": "VarDecl",
+                    "name": "sum",
+                    "type": {
+                      "qualType": "int"
+                    }
+                  }
+                },
+                {
+                  "id": "0x56126bc8ea88",
+                  "kind": "BinaryOperator",
+                  "range": {
+                    "begin": {
+                      "col": 14,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 19,
+                      "tokLen": 2
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "rvalue",
+                  "opcode": "-",
+                  "inner": [
+                    {
+                      "id": "0x56126bc8ea70",
+                      "kind": "ImplicitCastExpr",
+                      "range": {
+                        "begin": {
+                          "col": 14,
+                          "tokLen": 1
+                        },
+                        "end": {
+                          "col": 17,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "qualType": "int"
+                      },
+                      "valueCategory": "rvalue",
+                      "castKind": "IntegralCast",
+                      "inner": [
+                        {
+                          "id": "0x56126bc8ea58",
+                          "kind": "ImplicitCastExpr",
+                          "range": {
+                            "begin": {
+                              "col": 14,
+                              "tokLen": 1
+                            },
+                            "end": {
+                              "col": 17,
+                              "tokLen": 1
+                            }
+                          },
+                          "type": {
+                            "desugaredQualType": "char",
+                            "qualType": "__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type"
+                          },
+                          "valueCategory": "rvalue",
+                          "castKind": "LValueToRValue",
+                          "inner": [
+                            {
+                              "id": "0x56126bc8ea00",
+                              "kind": "CXXOperatorCallExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 14,
+                                  "tokLen": 1
+                                },
+                                "end": {
+                                  "col": 17,
+                                  "tokLen": 1
+                                }
+                              },
+                              "type": {
+                                "desugaredQualType": "char",
+                                "qualType": "__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type"
+                              },
+                              "valueCategory": "lvalue",
+                              "inner": [
+                                {
+                                  "id": "0x56126bc8e9e8",
+                                  "kind": "ImplicitCastExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 15,
+                                      "tokLen": 1
+                                    },
+                                    "end": {
+                                      "col": 17,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::reference (*)(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size_type)"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "castKind": "FunctionToPointerDecay",
+                                  "inner": [
+                                    {
+                                      "id": "0x56126bc8e968",
+                                      "kind": "DeclRefExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 15,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 17,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::reference (std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size_type)"
+                                      },
+                                      "valueCategory": "lvalue",
+                                      "referencedDecl": {
+                                        "id": "0x56126b9bc1a8",
+                                        "kind": "CXXMethodDecl",
+                                        "name": "operator[]",
+                                        "type": {
+                                          "qualType": "std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::reference (std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size_type)"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "0x56126bc8e8f8",
+                                  "kind": "DeclRefExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 14,
+                                      "tokLen": 1
+                                    },
+                                    "end": {
+                                      "col": 14,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "desugaredQualType": "std::__cxx11::basic_string<char>",
+                                    "qualType": "std::string"
+                                  },
+                                  "valueCategory": "lvalue",
+                                  "referencedDecl": {
+                                    "id": "0x56126bc8abe8",
+                                    "kind": "VarDecl",
+                                    "name": "s",
+                                    "type": {
+                                      "desugaredQualType": "std::__cxx11::basic_string<char>",
+                                      "qualType": "std::string"
+                                    }
+                                  }
+                                },
+                                {
+                                  "id": "0x56126bc8e950",
+                                  "kind": "ImplicitCastExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 16,
+                                      "tokLen": 1
+                                    },
+                                    "end": {
+                                      "col": 16,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "desugaredQualType": "unsigned long",
+                                    "qualType": "std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size_type"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "castKind": "IntegralCast",
+                                  "inner": [
+                                    {
+                                      "id": "0x56126bc8e938",
+                                      "kind": "ImplicitCastExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 16,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 16,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "int"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "castKind": "LValueToRValue",
+                                      "inner": [
+                                        {
+                                          "id": "0x56126bc8e918",
+                                          "kind": "DeclRefExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 16,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 16,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "int"
+                                          },
+                                          "valueCategory": "lvalue",
+                                          "referencedDecl": {
+                                            "id": "0x56126bc8e708",
+                                            "kind": "VarDecl",
+                                            "name": "i",
+                                            "type": {
+                                              "qualType": "int"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0x56126bc8ea38",
+                      "kind": "IntegerLiteral",
+                      "range": {
+                        "begin": {
+                          "col": 19,
+                          "tokLen": 2
+                        },
+                        "end": {
+                          "col": 19,
+                          "tokLen": 2
+                        }
+                      },
+                      "type": {
+                        "qualType": "int"
+                      },
+                      "valueCategory": "rvalue",
+                      "value": "48"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "0x56126bc8eb48",
+          "kind": "ReturnStmt",
+          "range": {
+            "begin": {
+              "line": 23,
+              "col": 5,
+              "tokLen": 6
+            },
+            "end": {
+              "col": 12,
+              "tokLen": 3
+            }
+          },
+          "inner": [
+            {
+              "id": "0x56126bc8eb30",
+              "kind": "ImplicitCastExpr",
+              "range": {
+                "begin": {
+                  "col": 12,
+                  "tokLen": 3
+                },
+                "end": {
+                  "col": 12,
+                  "tokLen": 3
+                }
+              },
+              "type": {
+                "qualType": "int"
+              },
+              "valueCategory": "rvalue",
+              "castKind": "LValueToRValue",
+              "inner": [
+                {
+                  "id": "0x56126bc8eb10",
+                  "kind": "DeclRefExpr",
+                  "range": {
+                    "begin": {
+                      "col": 12,
+                      "tokLen": 3
+                    },
+                    "end": {
+                      "col": 12,
+                      "tokLen": 3
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "lvalue",
+                  "referencedDecl": {
+                    "id": "0x56126bc8ab38",
+                    "kind": "VarDecl",
+                    "name": "sum",
+                    "type": {
+                      "qualType": "int"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+]
+}

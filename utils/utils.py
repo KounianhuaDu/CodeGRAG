@@ -26,9 +26,38 @@ def stream_jsonl(filename: str):
             for line in fp:
                 if any(not x.isspace() for x in line):
                     yield json.loads(line)
-    
+
+def extract_res(code, language):
+    if "```python" in code:
+        code = code.split("```python")[1].split("```")[0]
+    return code
+
+def extract_translation(raw_code, trans):
+    if trans == 'cpp2python':
+        if "```python" in raw_code:
+            raw_code = raw_code.split("```python")[1].split("```")[0]
+        code_ = []
+        start = False
+        for line in raw_code.split("\n"):
+            if line.strip().startswith('def'):
+                start = True
+                continue
+            if start and (len(line.strip()) > 0 and line[0] != ' ' and line[0] != '\t'):
+                break
+            if start:
+                code_.append(line)
+        code = "\n".join(code_)
+        return code
+    elif trans == 'python2cpp':
+        start = raw_code.find('{')
+        end = raw_code.rfind('}')
+        code = raw_code[start+1:end+1]+'\n\n'
+        return code
+     
 def extract_function_body(raw_code, language):
     if language == 'python':
+        #if "```python" in raw_code:
+        #    raw_code = raw_code.split("```python")[1].split("```")[0]
         code_ = []
         start = False
         for line in raw_code.split("\n"):
@@ -60,7 +89,7 @@ def extract_function_body(raw_code, language):
         return code
 
 def extract_generation_code(message, languge):
-    raw_code = re.findall(f'(?is)```(.*)```', message)[0]
+    raw_code = re.findall(f'(?is)```python(.*)```', message)[0]
     start = raw_code.find('{')
     end = raw_code.rfind('}')
     code = raw_code[start+1:end+1]+'\n\n'

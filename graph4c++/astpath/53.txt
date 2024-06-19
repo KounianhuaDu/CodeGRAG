@@ -1,0 +1,228 @@
+{
+"kind":"fileAST",
+"inner":[
+{
+  "id": "0x556dd8b7c240",
+  "kind": "FunctionDecl",
+  "loc": {
+    "file": "/ext0/knhdu/CodeRAG/data/transcode/codes/53.cpp",
+    "line": 6,
+    "col": 5,
+    "tokLen": 3
+  },
+  "range": {
+    "begin": {
+      "col": 1,
+      "tokLen": 3
+    },
+    "end": {
+      "line": 8,
+      "col": 1,
+      "tokLen": 1
+    }
+  },
+  "name": "add",
+  "type": {
+    "qualType": "int (int, int)"
+  },
+  "inner": [
+    {
+      "id": "0x556dd8b7c0e0",
+      "kind": "ParmVarDecl",
+      "loc": {
+        "line": 6,
+        "col": 13,
+        "tokLen": 1
+      },
+      "range": {
+        "begin": {
+          "col": 9,
+          "tokLen": 3
+        },
+        "end": {
+          "col": 13,
+          "tokLen": 1
+        }
+      },
+      "isUsed": true,
+      "name": "x",
+      "type": {
+        "qualType": "int"
+      }
+    },
+    {
+      "id": "0x556dd8b7c160",
+      "kind": "ParmVarDecl",
+      "loc": {
+        "col": 19,
+        "tokLen": 1
+      },
+      "range": {
+        "begin": {
+          "col": 15,
+          "tokLen": 3
+        },
+        "end": {
+          "col": 19,
+          "tokLen": 1
+        }
+      },
+      "isUsed": true,
+      "name": "y",
+      "type": {
+        "qualType": "int"
+      }
+    },
+    {
+      "id": "0x556dd8b7c390",
+      "kind": "CompoundStmt",
+      "range": {
+        "begin": {
+          "col": 21,
+          "tokLen": 1
+        },
+        "end": {
+          "line": 8,
+          "col": 1,
+          "tokLen": 1
+        }
+      },
+      "inner": [
+        {
+          "id": "0x556dd8b7c380",
+          "kind": "ReturnStmt",
+          "range": {
+            "begin": {
+              "line": 7,
+              "col": 5,
+              "tokLen": 6
+            },
+            "end": {
+              "col": 14,
+              "tokLen": 1
+            }
+          },
+          "inner": [
+            {
+              "id": "0x556dd8b7c360",
+              "kind": "BinaryOperator",
+              "range": {
+                "begin": {
+                  "col": 12,
+                  "tokLen": 1
+                },
+                "end": {
+                  "col": 14,
+                  "tokLen": 1
+                }
+              },
+              "type": {
+                "qualType": "int"
+              },
+              "valueCategory": "rvalue",
+              "opcode": "+",
+              "inner": [
+                {
+                  "id": "0x556dd8b7c330",
+                  "kind": "ImplicitCastExpr",
+                  "range": {
+                    "begin": {
+                      "col": 12,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 12,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "rvalue",
+                  "castKind": "LValueToRValue",
+                  "inner": [
+                    {
+                      "id": "0x556dd8b7c2f0",
+                      "kind": "DeclRefExpr",
+                      "range": {
+                        "begin": {
+                          "col": 12,
+                          "tokLen": 1
+                        },
+                        "end": {
+                          "col": 12,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "qualType": "int"
+                      },
+                      "valueCategory": "lvalue",
+                      "referencedDecl": {
+                        "id": "0x556dd8b7c0e0",
+                        "kind": "ParmVarDecl",
+                        "name": "x",
+                        "type": {
+                          "qualType": "int"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "0x556dd8b7c348",
+                  "kind": "ImplicitCastExpr",
+                  "range": {
+                    "begin": {
+                      "col": 14,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 14,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "rvalue",
+                  "castKind": "LValueToRValue",
+                  "inner": [
+                    {
+                      "id": "0x556dd8b7c310",
+                      "kind": "DeclRefExpr",
+                      "range": {
+                        "begin": {
+                          "col": 14,
+                          "tokLen": 1
+                        },
+                        "end": {
+                          "col": 14,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "qualType": "int"
+                      },
+                      "valueCategory": "lvalue",
+                      "referencedDecl": {
+                        "id": "0x556dd8b7c160",
+                        "kind": "ParmVarDecl",
+                        "name": "y",
+                        "type": {
+                          "qualType": "int"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+]
+}

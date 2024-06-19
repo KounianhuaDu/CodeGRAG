@@ -1,0 +1,1593 @@
+{
+"kind":"fileAST",
+"inner":[
+{
+  "id": "0x560fc912fd28",
+  "kind": "FunctionDecl",
+  "loc": {
+    "file": "/ext0/knhdu/CodeRAG/data/transcode/codes/63.cpp",
+    "line": 6,
+    "col": 5,
+    "tokLen": 6
+  },
+  "range": {
+    "begin": {
+      "col": 1,
+      "tokLen": 3
+    },
+    "end": {
+      "line": 15,
+      "col": 1,
+      "tokLen": 1
+    }
+  },
+  "name": "fibfib",
+  "type": {
+    "qualType": "int (int)"
+  },
+  "inner": [
+    {
+      "id": "0x560fc912fc90",
+      "kind": "ParmVarDecl",
+      "loc": {
+        "line": 6,
+        "col": 16,
+        "tokLen": 1
+      },
+      "range": {
+        "begin": {
+          "col": 12,
+          "tokLen": 3
+        },
+        "end": {
+          "col": 16,
+          "tokLen": 1
+        }
+      },
+      "isUsed": true,
+      "name": "n",
+      "type": {
+        "qualType": "int"
+      }
+    },
+    {
+      "id": "0x560fc9130730",
+      "kind": "CompoundStmt",
+      "range": {
+        "begin": {
+          "col": 18,
+          "tokLen": 1
+        },
+        "end": {
+          "line": 15,
+          "col": 1,
+          "tokLen": 1
+        }
+      },
+      "inner": [
+        {
+          "id": "0x560fc912fed8",
+          "kind": "DeclStmt",
+          "range": {
+            "begin": {
+              "line": 7,
+              "col": 5,
+              "tokLen": 3
+            },
+            "end": {
+              "col": 16,
+              "tokLen": 1
+            }
+          },
+          "inner": [
+            {
+              "id": "0x560fc912fe70",
+              "kind": "VarDecl",
+              "loc": {
+                "col": 9,
+                "tokLen": 2
+              },
+              "range": {
+                "begin": {
+                  "col": 5,
+                  "tokLen": 3
+                },
+                "end": {
+                  "col": 15,
+                  "tokLen": 1
+                }
+              },
+              "isUsed": true,
+              "name": "ff",
+              "type": {
+                "qualType": "int [100]"
+              }
+            }
+          ]
+        },
+        {
+          "id": "0x560fc912ff88",
+          "kind": "BinaryOperator",
+          "range": {
+            "begin": {
+              "line": 8,
+              "col": 5,
+              "tokLen": 2
+            },
+            "end": {
+              "col": 11,
+              "tokLen": 1
+            }
+          },
+          "type": {
+            "qualType": "int"
+          },
+          "valueCategory": "lvalue",
+          "opcode": "=",
+          "inner": [
+            {
+              "id": "0x560fc912ff48",
+              "kind": "ArraySubscriptExpr",
+              "range": {
+                "begin": {
+                  "col": 5,
+                  "tokLen": 2
+                },
+                "end": {
+                  "col": 9,
+                  "tokLen": 1
+                }
+              },
+              "type": {
+                "qualType": "int"
+              },
+              "valueCategory": "lvalue",
+              "inner": [
+                {
+                  "id": "0x560fc912ff30",
+                  "kind": "ImplicitCastExpr",
+                  "range": {
+                    "begin": {
+                      "col": 5,
+                      "tokLen": 2
+                    },
+                    "end": {
+                      "col": 5,
+                      "tokLen": 2
+                    }
+                  },
+                  "type": {
+                    "qualType": "int *"
+                  },
+                  "valueCategory": "rvalue",
+                  "castKind": "ArrayToPointerDecay",
+                  "inner": [
+                    {
+                      "id": "0x560fc912fef0",
+                      "kind": "DeclRefExpr",
+                      "range": {
+                        "begin": {
+                          "col": 5,
+                          "tokLen": 2
+                        },
+                        "end": {
+                          "col": 5,
+                          "tokLen": 2
+                        }
+                      },
+                      "type": {
+                        "qualType": "int [100]"
+                      },
+                      "valueCategory": "lvalue",
+                      "referencedDecl": {
+                        "id": "0x560fc912fe70",
+                        "kind": "VarDecl",
+                        "name": "ff",
+                        "type": {
+                          "qualType": "int [100]"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "0x560fc912ff10",
+                  "kind": "IntegerLiteral",
+                  "range": {
+                    "begin": {
+                      "col": 8,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 8,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "rvalue",
+                  "value": "0"
+                }
+              ]
+            },
+            {
+              "id": "0x560fc912ff68",
+              "kind": "IntegerLiteral",
+              "range": {
+                "begin": {
+                  "col": 11,
+                  "tokLen": 1
+                },
+                "end": {
+                  "col": 11,
+                  "tokLen": 1
+                }
+              },
+              "type": {
+                "qualType": "int"
+              },
+              "valueCategory": "rvalue",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "id": "0x560fc9130040",
+          "kind": "BinaryOperator",
+          "range": {
+            "begin": {
+              "line": 9,
+              "col": 5,
+              "tokLen": 2
+            },
+            "end": {
+              "col": 11,
+              "tokLen": 1
+            }
+          },
+          "type": {
+            "qualType": "int"
+          },
+          "valueCategory": "lvalue",
+          "opcode": "=",
+          "inner": [
+            {
+              "id": "0x560fc9130000",
+              "kind": "ArraySubscriptExpr",
+              "range": {
+                "begin": {
+                  "col": 5,
+                  "tokLen": 2
+                },
+                "end": {
+                  "col": 9,
+                  "tokLen": 1
+                }
+              },
+              "type": {
+                "qualType": "int"
+              },
+              "valueCategory": "lvalue",
+              "inner": [
+                {
+                  "id": "0x560fc912ffe8",
+                  "kind": "ImplicitCastExpr",
+                  "range": {
+                    "begin": {
+                      "col": 5,
+                      "tokLen": 2
+                    },
+                    "end": {
+                      "col": 5,
+                      "tokLen": 2
+                    }
+                  },
+                  "type": {
+                    "qualType": "int *"
+                  },
+                  "valueCategory": "rvalue",
+                  "castKind": "ArrayToPointerDecay",
+                  "inner": [
+                    {
+                      "id": "0x560fc912ffa8",
+                      "kind": "DeclRefExpr",
+                      "range": {
+                        "begin": {
+                          "col": 5,
+                          "tokLen": 2
+                        },
+                        "end": {
+                          "col": 5,
+                          "tokLen": 2
+                        }
+                      },
+                      "type": {
+                        "qualType": "int [100]"
+                      },
+                      "valueCategory": "lvalue",
+                      "referencedDecl": {
+                        "id": "0x560fc912fe70",
+                        "kind": "VarDecl",
+                        "name": "ff",
+                        "type": {
+                          "qualType": "int [100]"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "0x560fc912ffc8",
+                  "kind": "IntegerLiteral",
+                  "range": {
+                    "begin": {
+                      "col": 8,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 8,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "rvalue",
+                  "value": "1"
+                }
+              ]
+            },
+            {
+              "id": "0x560fc9130020",
+              "kind": "IntegerLiteral",
+              "range": {
+                "begin": {
+                  "col": 11,
+                  "tokLen": 1
+                },
+                "end": {
+                  "col": 11,
+                  "tokLen": 1
+                }
+              },
+              "type": {
+                "qualType": "int"
+              },
+              "valueCategory": "rvalue",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "id": "0x560fc91300f8",
+          "kind": "BinaryOperator",
+          "range": {
+            "begin": {
+              "line": 10,
+              "col": 5,
+              "tokLen": 2
+            },
+            "end": {
+              "col": 11,
+              "tokLen": 1
+            }
+          },
+          "type": {
+            "qualType": "int"
+          },
+          "valueCategory": "lvalue",
+          "opcode": "=",
+          "inner": [
+            {
+              "id": "0x560fc91300b8",
+              "kind": "ArraySubscriptExpr",
+              "range": {
+                "begin": {
+                  "col": 5,
+                  "tokLen": 2
+                },
+                "end": {
+                  "col": 9,
+                  "tokLen": 1
+                }
+              },
+              "type": {
+                "qualType": "int"
+              },
+              "valueCategory": "lvalue",
+              "inner": [
+                {
+                  "id": "0x560fc91300a0",
+                  "kind": "ImplicitCastExpr",
+                  "range": {
+                    "begin": {
+                      "col": 5,
+                      "tokLen": 2
+                    },
+                    "end": {
+                      "col": 5,
+                      "tokLen": 2
+                    }
+                  },
+                  "type": {
+                    "qualType": "int *"
+                  },
+                  "valueCategory": "rvalue",
+                  "castKind": "ArrayToPointerDecay",
+                  "inner": [
+                    {
+                      "id": "0x560fc9130060",
+                      "kind": "DeclRefExpr",
+                      "range": {
+                        "begin": {
+                          "col": 5,
+                          "tokLen": 2
+                        },
+                        "end": {
+                          "col": 5,
+                          "tokLen": 2
+                        }
+                      },
+                      "type": {
+                        "qualType": "int [100]"
+                      },
+                      "valueCategory": "lvalue",
+                      "referencedDecl": {
+                        "id": "0x560fc912fe70",
+                        "kind": "VarDecl",
+                        "name": "ff",
+                        "type": {
+                          "qualType": "int [100]"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "0x560fc9130080",
+                  "kind": "IntegerLiteral",
+                  "range": {
+                    "begin": {
+                      "col": 8,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 8,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "rvalue",
+                  "value": "2"
+                }
+              ]
+            },
+            {
+              "id": "0x560fc91300d8",
+              "kind": "IntegerLiteral",
+              "range": {
+                "begin": {
+                  "col": 11,
+                  "tokLen": 1
+                },
+                "end": {
+                  "col": 11,
+                  "tokLen": 1
+                }
+              },
+              "type": {
+                "qualType": "int"
+              },
+              "valueCategory": "rvalue",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "id": "0x560fc9130640",
+          "kind": "ForStmt",
+          "range": {
+            "begin": {
+              "line": 11,
+              "col": 5,
+              "tokLen": 3
+            },
+            "end": {
+              "line": 12,
+              "col": 37,
+              "tokLen": 1
+            }
+          },
+          "inner": [
+            {
+              "id": "0x560fc91301b8",
+              "kind": "DeclStmt",
+              "range": {
+                "begin": {
+                  "line": 11,
+                  "col": 10,
+                  "tokLen": 3
+                },
+                "end": {
+                  "col": 17,
+                  "tokLen": 1
+                }
+              },
+              "inner": [
+                {
+                  "id": "0x560fc9130130",
+                  "kind": "VarDecl",
+                  "loc": {
+                    "col": 14,
+                    "tokLen": 1
+                  },
+                  "range": {
+                    "begin": {
+                      "col": 10,
+                      "tokLen": 3
+                    },
+                    "end": {
+                      "col": 16,
+                      "tokLen": 1
+                    }
+                  },
+                  "isUsed": true,
+                  "name": "i",
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "init": "c",
+                  "inner": [
+                    {
+                      "id": "0x560fc9130198",
+                      "kind": "IntegerLiteral",
+                      "range": {
+                        "begin": {
+                          "col": 16,
+                          "tokLen": 1
+                        },
+                        "end": {
+                          "col": 16,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "qualType": "int"
+                      },
+                      "valueCategory": "rvalue",
+                      "value": "3"
+                    }
+                  ]
+                }
+              ]
+            },
+            {},
+            {
+              "id": "0x560fc9130240",
+              "kind": "BinaryOperator",
+              "range": {
+                "begin": {
+                  "col": 18,
+                  "tokLen": 1
+                },
+                "end": {
+                  "col": 21,
+                  "tokLen": 1
+                }
+              },
+              "type": {
+                "qualType": "bool"
+              },
+              "valueCategory": "rvalue",
+              "opcode": "<=",
+              "inner": [
+                {
+                  "id": "0x560fc9130210",
+                  "kind": "ImplicitCastExpr",
+                  "range": {
+                    "begin": {
+                      "col": 18,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 18,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "rvalue",
+                  "castKind": "LValueToRValue",
+                  "inner": [
+                    {
+                      "id": "0x560fc91301d0",
+                      "kind": "DeclRefExpr",
+                      "range": {
+                        "begin": {
+                          "col": 18,
+                          "tokLen": 1
+                        },
+                        "end": {
+                          "col": 18,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "qualType": "int"
+                      },
+                      "valueCategory": "lvalue",
+                      "referencedDecl": {
+                        "id": "0x560fc9130130",
+                        "kind": "VarDecl",
+                        "name": "i",
+                        "type": {
+                          "qualType": "int"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "0x560fc9130228",
+                  "kind": "ImplicitCastExpr",
+                  "range": {
+                    "begin": {
+                      "col": 21,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 21,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "rvalue",
+                  "castKind": "LValueToRValue",
+                  "inner": [
+                    {
+                      "id": "0x560fc91301f0",
+                      "kind": "DeclRefExpr",
+                      "range": {
+                        "begin": {
+                          "col": 21,
+                          "tokLen": 1
+                        },
+                        "end": {
+                          "col": 21,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "qualType": "int"
+                      },
+                      "valueCategory": "lvalue",
+                      "referencedDecl": {
+                        "id": "0x560fc912fc90",
+                        "kind": "ParmVarDecl",
+                        "name": "n",
+                        "type": {
+                          "qualType": "int"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "0x560fc9130280",
+              "kind": "UnaryOperator",
+              "range": {
+                "begin": {
+                  "col": 23,
+                  "tokLen": 1
+                },
+                "end": {
+                  "col": 24,
+                  "tokLen": 2
+                }
+              },
+              "type": {
+                "qualType": "int"
+              },
+              "valueCategory": "rvalue",
+              "isPostfix": true,
+              "opcode": "++",
+              "inner": [
+                {
+                  "id": "0x560fc9130260",
+                  "kind": "DeclRefExpr",
+                  "range": {
+                    "begin": {
+                      "col": 23,
+                      "tokLen": 1
+                    },
+                    "end": {
+                      "col": 23,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "lvalue",
+                  "referencedDecl": {
+                    "id": "0x560fc9130130",
+                    "kind": "VarDecl",
+                    "name": "i",
+                    "type": {
+                      "qualType": "int"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "0x560fc9130620",
+              "kind": "BinaryOperator",
+              "range": {
+                "begin": {
+                  "line": 12,
+                  "col": 9,
+                  "tokLen": 2
+                },
+                "end": {
+                  "col": 37,
+                  "tokLen": 1
+                }
+              },
+              "type": {
+                "qualType": "int"
+              },
+              "valueCategory": "lvalue",
+              "opcode": "=",
+              "inner": [
+                {
+                  "id": "0x560fc9130308",
+                  "kind": "ArraySubscriptExpr",
+                  "range": {
+                    "begin": {
+                      "col": 9,
+                      "tokLen": 2
+                    },
+                    "end": {
+                      "col": 13,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "lvalue",
+                  "inner": [
+                    {
+                      "id": "0x560fc91302d8",
+                      "kind": "ImplicitCastExpr",
+                      "range": {
+                        "begin": {
+                          "col": 9,
+                          "tokLen": 2
+                        },
+                        "end": {
+                          "col": 9,
+                          "tokLen": 2
+                        }
+                      },
+                      "type": {
+                        "qualType": "int *"
+                      },
+                      "valueCategory": "rvalue",
+                      "castKind": "ArrayToPointerDecay",
+                      "inner": [
+                        {
+                          "id": "0x560fc9130298",
+                          "kind": "DeclRefExpr",
+                          "range": {
+                            "begin": {
+                              "col": 9,
+                              "tokLen": 2
+                            },
+                            "end": {
+                              "col": 9,
+                              "tokLen": 2
+                            }
+                          },
+                          "type": {
+                            "qualType": "int [100]"
+                          },
+                          "valueCategory": "lvalue",
+                          "referencedDecl": {
+                            "id": "0x560fc912fe70",
+                            "kind": "VarDecl",
+                            "name": "ff",
+                            "type": {
+                              "qualType": "int [100]"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0x560fc91302f0",
+                      "kind": "ImplicitCastExpr",
+                      "range": {
+                        "begin": {
+                          "col": 12,
+                          "tokLen": 1
+                        },
+                        "end": {
+                          "col": 12,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "qualType": "int"
+                      },
+                      "valueCategory": "rvalue",
+                      "castKind": "LValueToRValue",
+                      "inner": [
+                        {
+                          "id": "0x560fc91302b8",
+                          "kind": "DeclRefExpr",
+                          "range": {
+                            "begin": {
+                              "col": 12,
+                              "tokLen": 1
+                            },
+                            "end": {
+                              "col": 12,
+                              "tokLen": 1
+                            }
+                          },
+                          "type": {
+                            "qualType": "int"
+                          },
+                          "valueCategory": "lvalue",
+                          "referencedDecl": {
+                            "id": "0x560fc9130130",
+                            "kind": "VarDecl",
+                            "name": "i",
+                            "type": {
+                              "qualType": "int"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "0x560fc9130600",
+                  "kind": "BinaryOperator",
+                  "range": {
+                    "begin": {
+                      "col": 15,
+                      "tokLen": 2
+                    },
+                    "end": {
+                      "col": 37,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "rvalue",
+                  "opcode": "+",
+                  "inner": [
+                    {
+                      "id": "0x560fc91304f8",
+                      "kind": "BinaryOperator",
+                      "range": {
+                        "begin": {
+                          "col": 15,
+                          "tokLen": 2
+                        },
+                        "end": {
+                          "col": 29,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "qualType": "int"
+                      },
+                      "valueCategory": "rvalue",
+                      "opcode": "+",
+                      "inner": [
+                        {
+                          "id": "0x560fc91304c8",
+                          "kind": "ImplicitCastExpr",
+                          "range": {
+                            "begin": {
+                              "col": 15,
+                              "tokLen": 2
+                            },
+                            "end": {
+                              "col": 21,
+                              "tokLen": 1
+                            }
+                          },
+                          "type": {
+                            "qualType": "int"
+                          },
+                          "valueCategory": "rvalue",
+                          "castKind": "LValueToRValue",
+                          "inner": [
+                            {
+                              "id": "0x560fc91303d8",
+                              "kind": "ArraySubscriptExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 15,
+                                  "tokLen": 2
+                                },
+                                "end": {
+                                  "col": 21,
+                                  "tokLen": 1
+                                }
+                              },
+                              "type": {
+                                "qualType": "int"
+                              },
+                              "valueCategory": "lvalue",
+                              "inner": [
+                                {
+                                  "id": "0x560fc91303c0",
+                                  "kind": "ImplicitCastExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 15,
+                                      "tokLen": 2
+                                    },
+                                    "end": {
+                                      "col": 15,
+                                      "tokLen": 2
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "int *"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "castKind": "ArrayToPointerDecay",
+                                  "inner": [
+                                    {
+                                      "id": "0x560fc9130328",
+                                      "kind": "DeclRefExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 15,
+                                          "tokLen": 2
+                                        },
+                                        "end": {
+                                          "col": 15,
+                                          "tokLen": 2
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "int [100]"
+                                      },
+                                      "valueCategory": "lvalue",
+                                      "referencedDecl": {
+                                        "id": "0x560fc912fe70",
+                                        "kind": "VarDecl",
+                                        "name": "ff",
+                                        "type": {
+                                          "qualType": "int [100]"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "0x560fc91303a0",
+                                  "kind": "BinaryOperator",
+                                  "range": {
+                                    "begin": {
+                                      "col": 18,
+                                      "tokLen": 1
+                                    },
+                                    "end": {
+                                      "col": 20,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "int"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "opcode": "-",
+                                  "inner": [
+                                    {
+                                      "id": "0x560fc9130388",
+                                      "kind": "ImplicitCastExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 18,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 18,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "int"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "castKind": "LValueToRValue",
+                                      "inner": [
+                                        {
+                                          "id": "0x560fc9130348",
+                                          "kind": "DeclRefExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 18,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 18,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "int"
+                                          },
+                                          "valueCategory": "lvalue",
+                                          "referencedDecl": {
+                                            "id": "0x560fc9130130",
+                                            "kind": "VarDecl",
+                                            "name": "i",
+                                            "type": {
+                                              "qualType": "int"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "0x560fc9130368",
+                                      "kind": "IntegerLiteral",
+                                      "range": {
+                                        "begin": {
+                                          "col": 20,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 20,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "int"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "value": "1"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0x560fc91304e0",
+                          "kind": "ImplicitCastExpr",
+                          "range": {
+                            "begin": {
+                              "col": 23,
+                              "tokLen": 2
+                            },
+                            "end": {
+                              "col": 29,
+                              "tokLen": 1
+                            }
+                          },
+                          "type": {
+                            "qualType": "int"
+                          },
+                          "valueCategory": "rvalue",
+                          "castKind": "LValueToRValue",
+                          "inner": [
+                            {
+                              "id": "0x560fc91304a8",
+                              "kind": "ArraySubscriptExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 23,
+                                  "tokLen": 2
+                                },
+                                "end": {
+                                  "col": 29,
+                                  "tokLen": 1
+                                }
+                              },
+                              "type": {
+                                "qualType": "int"
+                              },
+                              "valueCategory": "lvalue",
+                              "inner": [
+                                {
+                                  "id": "0x560fc9130490",
+                                  "kind": "ImplicitCastExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 23,
+                                      "tokLen": 2
+                                    },
+                                    "end": {
+                                      "col": 23,
+                                      "tokLen": 2
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "int *"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "castKind": "ArrayToPointerDecay",
+                                  "inner": [
+                                    {
+                                      "id": "0x560fc91303f8",
+                                      "kind": "DeclRefExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 23,
+                                          "tokLen": 2
+                                        },
+                                        "end": {
+                                          "col": 23,
+                                          "tokLen": 2
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "int [100]"
+                                      },
+                                      "valueCategory": "lvalue",
+                                      "referencedDecl": {
+                                        "id": "0x560fc912fe70",
+                                        "kind": "VarDecl",
+                                        "name": "ff",
+                                        "type": {
+                                          "qualType": "int [100]"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "0x560fc9130470",
+                                  "kind": "BinaryOperator",
+                                  "range": {
+                                    "begin": {
+                                      "col": 26,
+                                      "tokLen": 1
+                                    },
+                                    "end": {
+                                      "col": 28,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "int"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "opcode": "-",
+                                  "inner": [
+                                    {
+                                      "id": "0x560fc9130458",
+                                      "kind": "ImplicitCastExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 26,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 26,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "int"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "castKind": "LValueToRValue",
+                                      "inner": [
+                                        {
+                                          "id": "0x560fc9130418",
+                                          "kind": "DeclRefExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 26,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 26,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "int"
+                                          },
+                                          "valueCategory": "lvalue",
+                                          "referencedDecl": {
+                                            "id": "0x560fc9130130",
+                                            "kind": "VarDecl",
+                                            "name": "i",
+                                            "type": {
+                                              "qualType": "int"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "0x560fc9130438",
+                                      "kind": "IntegerLiteral",
+                                      "range": {
+                                        "begin": {
+                                          "col": 28,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 28,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "int"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "value": "2"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0x560fc91305e8",
+                      "kind": "ImplicitCastExpr",
+                      "range": {
+                        "begin": {
+                          "col": 31,
+                          "tokLen": 2
+                        },
+                        "end": {
+                          "col": 37,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "qualType": "int"
+                      },
+                      "valueCategory": "rvalue",
+                      "castKind": "LValueToRValue",
+                      "inner": [
+                        {
+                          "id": "0x560fc91305c8",
+                          "kind": "ArraySubscriptExpr",
+                          "range": {
+                            "begin": {
+                              "col": 31,
+                              "tokLen": 2
+                            },
+                            "end": {
+                              "col": 37,
+                              "tokLen": 1
+                            }
+                          },
+                          "type": {
+                            "qualType": "int"
+                          },
+                          "valueCategory": "lvalue",
+                          "inner": [
+                            {
+                              "id": "0x560fc91305b0",
+                              "kind": "ImplicitCastExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 31,
+                                  "tokLen": 2
+                                },
+                                "end": {
+                                  "col": 31,
+                                  "tokLen": 2
+                                }
+                              },
+                              "type": {
+                                "qualType": "int *"
+                              },
+                              "valueCategory": "rvalue",
+                              "castKind": "ArrayToPointerDecay",
+                              "inner": [
+                                {
+                                  "id": "0x560fc9130518",
+                                  "kind": "DeclRefExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 31,
+                                      "tokLen": 2
+                                    },
+                                    "end": {
+                                      "col": 31,
+                                      "tokLen": 2
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "int [100]"
+                                  },
+                                  "valueCategory": "lvalue",
+                                  "referencedDecl": {
+                                    "id": "0x560fc912fe70",
+                                    "kind": "VarDecl",
+                                    "name": "ff",
+                                    "type": {
+                                      "qualType": "int [100]"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "0x560fc9130590",
+                              "kind": "BinaryOperator",
+                              "range": {
+                                "begin": {
+                                  "col": 34,
+                                  "tokLen": 1
+                                },
+                                "end": {
+                                  "col": 36,
+                                  "tokLen": 1
+                                }
+                              },
+                              "type": {
+                                "qualType": "int"
+                              },
+                              "valueCategory": "rvalue",
+                              "opcode": "-",
+                              "inner": [
+                                {
+                                  "id": "0x560fc9130578",
+                                  "kind": "ImplicitCastExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 34,
+                                      "tokLen": 1
+                                    },
+                                    "end": {
+                                      "col": 34,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "int"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "castKind": "LValueToRValue",
+                                  "inner": [
+                                    {
+                                      "id": "0x560fc9130538",
+                                      "kind": "DeclRefExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 34,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 34,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "int"
+                                      },
+                                      "valueCategory": "lvalue",
+                                      "referencedDecl": {
+                                        "id": "0x560fc9130130",
+                                        "kind": "VarDecl",
+                                        "name": "i",
+                                        "type": {
+                                          "qualType": "int"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "0x560fc9130558",
+                                  "kind": "IntegerLiteral",
+                                  "range": {
+                                    "begin": {
+                                      "col": 36,
+                                      "tokLen": 1
+                                    },
+                                    "end": {
+                                      "col": 36,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "int"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "value": "3"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "0x560fc9130720",
+          "kind": "ReturnStmt",
+          "range": {
+            "begin": {
+              "line": 13,
+              "col": 5,
+              "tokLen": 6
+            },
+            "end": {
+              "col": 16,
+              "tokLen": 1
+            }
+          },
+          "inner": [
+            {
+              "id": "0x560fc9130708",
+              "kind": "ImplicitCastExpr",
+              "range": {
+                "begin": {
+                  "col": 12,
+                  "tokLen": 2
+                },
+                "end": {
+                  "col": 16,
+                  "tokLen": 1
+                }
+              },
+              "type": {
+                "qualType": "int"
+              },
+              "valueCategory": "rvalue",
+              "castKind": "LValueToRValue",
+              "inner": [
+                {
+                  "id": "0x560fc91306e8",
+                  "kind": "ArraySubscriptExpr",
+                  "range": {
+                    "begin": {
+                      "col": 12,
+                      "tokLen": 2
+                    },
+                    "end": {
+                      "col": 16,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "valueCategory": "lvalue",
+                  "inner": [
+                    {
+                      "id": "0x560fc91306b8",
+                      "kind": "ImplicitCastExpr",
+                      "range": {
+                        "begin": {
+                          "col": 12,
+                          "tokLen": 2
+                        },
+                        "end": {
+                          "col": 12,
+                          "tokLen": 2
+                        }
+                      },
+                      "type": {
+                        "qualType": "int *"
+                      },
+                      "valueCategory": "rvalue",
+                      "castKind": "ArrayToPointerDecay",
+                      "inner": [
+                        {
+                          "id": "0x560fc9130678",
+                          "kind": "DeclRefExpr",
+                          "range": {
+                            "begin": {
+                              "col": 12,
+                              "tokLen": 2
+                            },
+                            "end": {
+                              "col": 12,
+                              "tokLen": 2
+                            }
+                          },
+                          "type": {
+                            "qualType": "int [100]"
+                          },
+                          "valueCategory": "lvalue",
+                          "referencedDecl": {
+                            "id": "0x560fc912fe70",
+                            "kind": "VarDecl",
+                            "name": "ff",
+                            "type": {
+                              "qualType": "int [100]"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0x560fc91306d0",
+                      "kind": "ImplicitCastExpr",
+                      "range": {
+                        "begin": {
+                          "col": 15,
+                          "tokLen": 1
+                        },
+                        "end": {
+                          "col": 15,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "qualType": "int"
+                      },
+                      "valueCategory": "rvalue",
+                      "castKind": "LValueToRValue",
+                      "inner": [
+                        {
+                          "id": "0x560fc9130698",
+                          "kind": "DeclRefExpr",
+                          "range": {
+                            "begin": {
+                              "col": 15,
+                              "tokLen": 1
+                            },
+                            "end": {
+                              "col": 15,
+                              "tokLen": 1
+                            }
+                          },
+                          "type": {
+                            "qualType": "int"
+                          },
+                          "valueCategory": "lvalue",
+                          "referencedDecl": {
+                            "id": "0x560fc912fc90",
+                            "kind": "ParmVarDecl",
+                            "name": "n",
+                            "type": {
+                              "qualType": "int"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+]
+}

@@ -1,0 +1,1809 @@
+{
+"kind":"fileAST",
+"inner":[
+{
+  "id": "0x5569699332c8",
+  "kind": "FunctionDecl",
+  "loc": {
+    "file": "/ext0/knhdu/CodeRAG/data/transcode/codes/157.cpp",
+    "line": 6,
+    "col": 6,
+    "tokLen": 20
+  },
+  "range": {
+    "begin": {
+      "col": 1,
+      "tokLen": 4
+    },
+    "end": {
+      "line": 9,
+      "col": 1,
+      "tokLen": 1
+    }
+  },
+  "name": "right_angle_triangle",
+  "type": {
+    "qualType": "bool (float, float, float)"
+  },
+  "inner": [
+    {
+      "id": "0x5569699330e0",
+      "kind": "ParmVarDecl",
+      "loc": {
+        "line": 6,
+        "col": 33,
+        "tokLen": 1
+      },
+      "range": {
+        "begin": {
+          "col": 27,
+          "tokLen": 5
+        },
+        "end": {
+          "col": 33,
+          "tokLen": 1
+        }
+      },
+      "isUsed": true,
+      "name": "a",
+      "type": {
+        "qualType": "float"
+      }
+    },
+    {
+      "id": "0x556969933160",
+      "kind": "ParmVarDecl",
+      "loc": {
+        "col": 41,
+        "tokLen": 1
+      },
+      "range": {
+        "begin": {
+          "col": 35,
+          "tokLen": 5
+        },
+        "end": {
+          "col": 41,
+          "tokLen": 1
+        }
+      },
+      "isUsed": true,
+      "name": "b",
+      "type": {
+        "qualType": "float"
+      }
+    },
+    {
+      "id": "0x5569699331e0",
+      "kind": "ParmVarDecl",
+      "loc": {
+        "col": 49,
+        "tokLen": 1
+      },
+      "range": {
+        "begin": {
+          "col": 43,
+          "tokLen": 5
+        },
+        "end": {
+          "col": 49,
+          "tokLen": 1
+        }
+      },
+      "isUsed": true,
+      "name": "c",
+      "type": {
+        "qualType": "float"
+      }
+    },
+    {
+      "id": "0x556969933da8",
+      "kind": "CompoundStmt",
+      "range": {
+        "begin": {
+          "col": 51,
+          "tokLen": 1
+        },
+        "end": {
+          "line": 9,
+          "col": 1,
+          "tokLen": 1
+        }
+      },
+      "inner": [
+        {
+          "id": "0x556969933d70",
+          "kind": "IfStmt",
+          "range": {
+            "begin": {
+              "line": 7,
+              "col": 5,
+              "tokLen": 2
+            },
+            "end": {
+              "col": 89,
+              "tokLen": 4
+            }
+          },
+          "inner": [
+            {
+              "id": "0x556969933d30",
+              "kind": "BinaryOperator",
+              "range": {
+                "begin": {
+                  "col": 9,
+                  "tokLen": 3
+                },
+                "end": {
+                  "col": 76,
+                  "tokLen": 4
+                }
+              },
+              "type": {
+                "qualType": "bool"
+              },
+              "valueCategory": "rvalue",
+              "opcode": "||",
+              "inner": [
+                {
+                  "id": "0x5569699339e0",
+                  "kind": "BinaryOperator",
+                  "range": {
+                    "begin": {
+                      "col": 9,
+                      "tokLen": 3
+                    },
+                    "end": {
+                      "col": 51,
+                      "tokLen": 4
+                    }
+                  },
+                  "type": {
+                    "qualType": "bool"
+                  },
+                  "valueCategory": "rvalue",
+                  "opcode": "||",
+                  "inner": [
+                    {
+                      "id": "0x556969933690",
+                      "kind": "BinaryOperator",
+                      "range": {
+                        "begin": {
+                          "col": 9,
+                          "tokLen": 3
+                        },
+                        "end": {
+                          "col": 26,
+                          "tokLen": 4
+                        }
+                      },
+                      "type": {
+                        "qualType": "bool"
+                      },
+                      "valueCategory": "rvalue",
+                      "opcode": "<",
+                      "inner": [
+                        {
+                          "id": "0x556969933678",
+                          "kind": "ImplicitCastExpr",
+                          "range": {
+                            "begin": {
+                              "col": 9,
+                              "tokLen": 3
+                            },
+                            "end": {
+                              "col": 24,
+                              "tokLen": 1
+                            }
+                          },
+                          "type": {
+                            "qualType": "double"
+                          },
+                          "valueCategory": "rvalue",
+                          "castKind": "FloatingCast",
+                          "inner": [
+                            {
+                              "id": "0x556969933630",
+                              "kind": "CallExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 9,
+                                  "tokLen": 3
+                                },
+                                "end": {
+                                  "col": 24,
+                                  "tokLen": 1
+                                }
+                              },
+                              "type": {
+                                "qualType": "float"
+                              },
+                              "valueCategory": "rvalue",
+                              "inner": [
+                                {
+                                  "id": "0x556969933618",
+                                  "kind": "ImplicitCastExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 9,
+                                      "tokLen": 3
+                                    },
+                                    "end": {
+                                      "col": 9,
+                                      "tokLen": 3
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "float (*)(float)"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "castKind": "FunctionToPointerDecay",
+                                  "inner": [
+                                    {
+                                      "id": "0x5569699335f0",
+                                      "kind": "DeclRefExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 9,
+                                          "tokLen": 3
+                                        },
+                                        "end": {
+                                          "col": 9,
+                                          "tokLen": 3
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "float (float)"
+                                      },
+                                      "valueCategory": "lvalue",
+                                      "referencedDecl": {
+                                        "id": "0x5569694a0698",
+                                        "kind": "FunctionDecl",
+                                        "name": "abs",
+                                        "type": {
+                                          "qualType": "float (float)"
+                                        }
+                                      },
+                                      "foundReferencedDecl": {
+                                        "id": "0x556969931e68",
+                                        "kind": "UsingShadowDecl",
+                                        "name": "abs"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "0x5569699335d0",
+                                  "kind": "BinaryOperator",
+                                  "range": {
+                                    "begin": {
+                                      "col": 13,
+                                      "tokLen": 1
+                                    },
+                                    "end": {
+                                      "col": 23,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "float"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "opcode": "-",
+                                  "inner": [
+                                    {
+                                      "id": "0x556969933520",
+                                      "kind": "BinaryOperator",
+                                      "range": {
+                                        "begin": {
+                                          "col": 13,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 19,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "float"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "opcode": "+",
+                                      "inner": [
+                                        {
+                                          "id": "0x556969933470",
+                                          "kind": "BinaryOperator",
+                                          "range": {
+                                            "begin": {
+                                              "col": 13,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 15,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "float"
+                                          },
+                                          "valueCategory": "rvalue",
+                                          "opcode": "*",
+                                          "inner": [
+                                            {
+                                              "id": "0x556969933440",
+                                              "kind": "ImplicitCastExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 13,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 13,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "float"
+                                              },
+                                              "valueCategory": "rvalue",
+                                              "castKind": "LValueToRValue",
+                                              "inner": [
+                                                {
+                                                  "id": "0x556969933400",
+                                                  "kind": "DeclRefExpr",
+                                                  "range": {
+                                                    "begin": {
+                                                      "col": 13,
+                                                      "tokLen": 1
+                                                    },
+                                                    "end": {
+                                                      "col": 13,
+                                                      "tokLen": 1
+                                                    }
+                                                  },
+                                                  "type": {
+                                                    "qualType": "float"
+                                                  },
+                                                  "valueCategory": "lvalue",
+                                                  "referencedDecl": {
+                                                    "id": "0x5569699330e0",
+                                                    "kind": "ParmVarDecl",
+                                                    "name": "a",
+                                                    "type": {
+                                                      "qualType": "float"
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "id": "0x556969933458",
+                                              "kind": "ImplicitCastExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 15,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 15,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "float"
+                                              },
+                                              "valueCategory": "rvalue",
+                                              "castKind": "LValueToRValue",
+                                              "inner": [
+                                                {
+                                                  "id": "0x556969933420",
+                                                  "kind": "DeclRefExpr",
+                                                  "range": {
+                                                    "begin": {
+                                                      "col": 15,
+                                                      "tokLen": 1
+                                                    },
+                                                    "end": {
+                                                      "col": 15,
+                                                      "tokLen": 1
+                                                    }
+                                                  },
+                                                  "type": {
+                                                    "qualType": "float"
+                                                  },
+                                                  "valueCategory": "lvalue",
+                                                  "referencedDecl": {
+                                                    "id": "0x5569699330e0",
+                                                    "kind": "ParmVarDecl",
+                                                    "name": "a",
+                                                    "type": {
+                                                      "qualType": "float"
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "0x556969933500",
+                                          "kind": "BinaryOperator",
+                                          "range": {
+                                            "begin": {
+                                              "col": 17,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 19,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "float"
+                                          },
+                                          "valueCategory": "rvalue",
+                                          "opcode": "*",
+                                          "inner": [
+                                            {
+                                              "id": "0x5569699334d0",
+                                              "kind": "ImplicitCastExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 17,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 17,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "float"
+                                              },
+                                              "valueCategory": "rvalue",
+                                              "castKind": "LValueToRValue",
+                                              "inner": [
+                                                {
+                                                  "id": "0x556969933490",
+                                                  "kind": "DeclRefExpr",
+                                                  "range": {
+                                                    "begin": {
+                                                      "col": 17,
+                                                      "tokLen": 1
+                                                    },
+                                                    "end": {
+                                                      "col": 17,
+                                                      "tokLen": 1
+                                                    }
+                                                  },
+                                                  "type": {
+                                                    "qualType": "float"
+                                                  },
+                                                  "valueCategory": "lvalue",
+                                                  "referencedDecl": {
+                                                    "id": "0x556969933160",
+                                                    "kind": "ParmVarDecl",
+                                                    "name": "b",
+                                                    "type": {
+                                                      "qualType": "float"
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "id": "0x5569699334e8",
+                                              "kind": "ImplicitCastExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 19,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 19,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "float"
+                                              },
+                                              "valueCategory": "rvalue",
+                                              "castKind": "LValueToRValue",
+                                              "inner": [
+                                                {
+                                                  "id": "0x5569699334b0",
+                                                  "kind": "DeclRefExpr",
+                                                  "range": {
+                                                    "begin": {
+                                                      "col": 19,
+                                                      "tokLen": 1
+                                                    },
+                                                    "end": {
+                                                      "col": 19,
+                                                      "tokLen": 1
+                                                    }
+                                                  },
+                                                  "type": {
+                                                    "qualType": "float"
+                                                  },
+                                                  "valueCategory": "lvalue",
+                                                  "referencedDecl": {
+                                                    "id": "0x556969933160",
+                                                    "kind": "ParmVarDecl",
+                                                    "name": "b",
+                                                    "type": {
+                                                      "qualType": "float"
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "0x5569699335b0",
+                                      "kind": "BinaryOperator",
+                                      "range": {
+                                        "begin": {
+                                          "col": 21,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 23,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "float"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "opcode": "*",
+                                      "inner": [
+                                        {
+                                          "id": "0x556969933580",
+                                          "kind": "ImplicitCastExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 21,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 21,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "float"
+                                          },
+                                          "valueCategory": "rvalue",
+                                          "castKind": "LValueToRValue",
+                                          "inner": [
+                                            {
+                                              "id": "0x556969933540",
+                                              "kind": "DeclRefExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 21,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 21,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "float"
+                                              },
+                                              "valueCategory": "lvalue",
+                                              "referencedDecl": {
+                                                "id": "0x5569699331e0",
+                                                "kind": "ParmVarDecl",
+                                                "name": "c",
+                                                "type": {
+                                                  "qualType": "float"
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "0x556969933598",
+                                          "kind": "ImplicitCastExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 23,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 23,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "float"
+                                          },
+                                          "valueCategory": "rvalue",
+                                          "castKind": "LValueToRValue",
+                                          "inner": [
+                                            {
+                                              "id": "0x556969933560",
+                                              "kind": "DeclRefExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 23,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 23,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "float"
+                                              },
+                                              "valueCategory": "lvalue",
+                                              "referencedDecl": {
+                                                "id": "0x5569699331e0",
+                                                "kind": "ParmVarDecl",
+                                                "name": "c",
+                                                "type": {
+                                                  "qualType": "float"
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0x556969933658",
+                          "kind": "FloatingLiteral",
+                          "range": {
+                            "begin": {
+                              "col": 26,
+                              "tokLen": 4
+                            },
+                            "end": {
+                              "col": 26,
+                              "tokLen": 4
+                            }
+                          },
+                          "type": {
+                            "qualType": "double"
+                          },
+                          "valueCategory": "rvalue",
+                          "value": "1.0E-4"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0x5569699339c0",
+                      "kind": "BinaryOperator",
+                      "range": {
+                        "begin": {
+                          "col": 34,
+                          "tokLen": 3
+                        },
+                        "end": {
+                          "col": 51,
+                          "tokLen": 4
+                        }
+                      },
+                      "type": {
+                        "qualType": "bool"
+                      },
+                      "valueCategory": "rvalue",
+                      "opcode": "<",
+                      "inner": [
+                        {
+                          "id": "0x5569699339a8",
+                          "kind": "ImplicitCastExpr",
+                          "range": {
+                            "begin": {
+                              "col": 34,
+                              "tokLen": 3
+                            },
+                            "end": {
+                              "col": 49,
+                              "tokLen": 1
+                            }
+                          },
+                          "type": {
+                            "qualType": "double"
+                          },
+                          "valueCategory": "rvalue",
+                          "castKind": "FloatingCast",
+                          "inner": [
+                            {
+                              "id": "0x556969933960",
+                              "kind": "CallExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 34,
+                                  "tokLen": 3
+                                },
+                                "end": {
+                                  "col": 49,
+                                  "tokLen": 1
+                                }
+                              },
+                              "type": {
+                                "qualType": "float"
+                              },
+                              "valueCategory": "rvalue",
+                              "inner": [
+                                {
+                                  "id": "0x556969933948",
+                                  "kind": "ImplicitCastExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 34,
+                                      "tokLen": 3
+                                    },
+                                    "end": {
+                                      "col": 34,
+                                      "tokLen": 3
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "float (*)(float)"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "castKind": "FunctionToPointerDecay",
+                                  "inner": [
+                                    {
+                                      "id": "0x556969933920",
+                                      "kind": "DeclRefExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 34,
+                                          "tokLen": 3
+                                        },
+                                        "end": {
+                                          "col": 34,
+                                          "tokLen": 3
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "float (float)"
+                                      },
+                                      "valueCategory": "lvalue",
+                                      "referencedDecl": {
+                                        "id": "0x5569694a0698",
+                                        "kind": "FunctionDecl",
+                                        "name": "abs",
+                                        "type": {
+                                          "qualType": "float (float)"
+                                        }
+                                      },
+                                      "foundReferencedDecl": {
+                                        "id": "0x556969931e68",
+                                        "kind": "UsingShadowDecl",
+                                        "name": "abs"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "0x556969933900",
+                                  "kind": "BinaryOperator",
+                                  "range": {
+                                    "begin": {
+                                      "col": 38,
+                                      "tokLen": 1
+                                    },
+                                    "end": {
+                                      "col": 48,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "float"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "opcode": "-",
+                                  "inner": [
+                                    {
+                                      "id": "0x556969933850",
+                                      "kind": "BinaryOperator",
+                                      "range": {
+                                        "begin": {
+                                          "col": 38,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 44,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "float"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "opcode": "+",
+                                      "inner": [
+                                        {
+                                          "id": "0x5569699337a0",
+                                          "kind": "BinaryOperator",
+                                          "range": {
+                                            "begin": {
+                                              "col": 38,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 40,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "float"
+                                          },
+                                          "valueCategory": "rvalue",
+                                          "opcode": "*",
+                                          "inner": [
+                                            {
+                                              "id": "0x556969933770",
+                                              "kind": "ImplicitCastExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 38,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 38,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "float"
+                                              },
+                                              "valueCategory": "rvalue",
+                                              "castKind": "LValueToRValue",
+                                              "inner": [
+                                                {
+                                                  "id": "0x556969933730",
+                                                  "kind": "DeclRefExpr",
+                                                  "range": {
+                                                    "begin": {
+                                                      "col": 38,
+                                                      "tokLen": 1
+                                                    },
+                                                    "end": {
+                                                      "col": 38,
+                                                      "tokLen": 1
+                                                    }
+                                                  },
+                                                  "type": {
+                                                    "qualType": "float"
+                                                  },
+                                                  "valueCategory": "lvalue",
+                                                  "referencedDecl": {
+                                                    "id": "0x5569699330e0",
+                                                    "kind": "ParmVarDecl",
+                                                    "name": "a",
+                                                    "type": {
+                                                      "qualType": "float"
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "id": "0x556969933788",
+                                              "kind": "ImplicitCastExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 40,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 40,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "float"
+                                              },
+                                              "valueCategory": "rvalue",
+                                              "castKind": "LValueToRValue",
+                                              "inner": [
+                                                {
+                                                  "id": "0x556969933750",
+                                                  "kind": "DeclRefExpr",
+                                                  "range": {
+                                                    "begin": {
+                                                      "col": 40,
+                                                      "tokLen": 1
+                                                    },
+                                                    "end": {
+                                                      "col": 40,
+                                                      "tokLen": 1
+                                                    }
+                                                  },
+                                                  "type": {
+                                                    "qualType": "float"
+                                                  },
+                                                  "valueCategory": "lvalue",
+                                                  "referencedDecl": {
+                                                    "id": "0x5569699330e0",
+                                                    "kind": "ParmVarDecl",
+                                                    "name": "a",
+                                                    "type": {
+                                                      "qualType": "float"
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "0x556969933830",
+                                          "kind": "BinaryOperator",
+                                          "range": {
+                                            "begin": {
+                                              "col": 42,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 44,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "float"
+                                          },
+                                          "valueCategory": "rvalue",
+                                          "opcode": "*",
+                                          "inner": [
+                                            {
+                                              "id": "0x556969933800",
+                                              "kind": "ImplicitCastExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 42,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 42,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "float"
+                                              },
+                                              "valueCategory": "rvalue",
+                                              "castKind": "LValueToRValue",
+                                              "inner": [
+                                                {
+                                                  "id": "0x5569699337c0",
+                                                  "kind": "DeclRefExpr",
+                                                  "range": {
+                                                    "begin": {
+                                                      "col": 42,
+                                                      "tokLen": 1
+                                                    },
+                                                    "end": {
+                                                      "col": 42,
+                                                      "tokLen": 1
+                                                    }
+                                                  },
+                                                  "type": {
+                                                    "qualType": "float"
+                                                  },
+                                                  "valueCategory": "lvalue",
+                                                  "referencedDecl": {
+                                                    "id": "0x5569699331e0",
+                                                    "kind": "ParmVarDecl",
+                                                    "name": "c",
+                                                    "type": {
+                                                      "qualType": "float"
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "id": "0x556969933818",
+                                              "kind": "ImplicitCastExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 44,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 44,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "float"
+                                              },
+                                              "valueCategory": "rvalue",
+                                              "castKind": "LValueToRValue",
+                                              "inner": [
+                                                {
+                                                  "id": "0x5569699337e0",
+                                                  "kind": "DeclRefExpr",
+                                                  "range": {
+                                                    "begin": {
+                                                      "col": 44,
+                                                      "tokLen": 1
+                                                    },
+                                                    "end": {
+                                                      "col": 44,
+                                                      "tokLen": 1
+                                                    }
+                                                  },
+                                                  "type": {
+                                                    "qualType": "float"
+                                                  },
+                                                  "valueCategory": "lvalue",
+                                                  "referencedDecl": {
+                                                    "id": "0x5569699331e0",
+                                                    "kind": "ParmVarDecl",
+                                                    "name": "c",
+                                                    "type": {
+                                                      "qualType": "float"
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "0x5569699338e0",
+                                      "kind": "BinaryOperator",
+                                      "range": {
+                                        "begin": {
+                                          "col": 46,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 48,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "float"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "opcode": "*",
+                                      "inner": [
+                                        {
+                                          "id": "0x5569699338b0",
+                                          "kind": "ImplicitCastExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 46,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 46,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "float"
+                                          },
+                                          "valueCategory": "rvalue",
+                                          "castKind": "LValueToRValue",
+                                          "inner": [
+                                            {
+                                              "id": "0x556969933870",
+                                              "kind": "DeclRefExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 46,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 46,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "float"
+                                              },
+                                              "valueCategory": "lvalue",
+                                              "referencedDecl": {
+                                                "id": "0x556969933160",
+                                                "kind": "ParmVarDecl",
+                                                "name": "b",
+                                                "type": {
+                                                  "qualType": "float"
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "0x5569699338c8",
+                                          "kind": "ImplicitCastExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 48,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 48,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "float"
+                                          },
+                                          "valueCategory": "rvalue",
+                                          "castKind": "LValueToRValue",
+                                          "inner": [
+                                            {
+                                              "id": "0x556969933890",
+                                              "kind": "DeclRefExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 48,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 48,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "float"
+                                              },
+                                              "valueCategory": "lvalue",
+                                              "referencedDecl": {
+                                                "id": "0x556969933160",
+                                                "kind": "ParmVarDecl",
+                                                "name": "b",
+                                                "type": {
+                                                  "qualType": "float"
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0x556969933988",
+                          "kind": "FloatingLiteral",
+                          "range": {
+                            "begin": {
+                              "col": 51,
+                              "tokLen": 4
+                            },
+                            "end": {
+                              "col": 51,
+                              "tokLen": 4
+                            }
+                          },
+                          "type": {
+                            "qualType": "double"
+                          },
+                          "valueCategory": "rvalue",
+                          "value": "1.0E-4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "0x556969933d10",
+                  "kind": "BinaryOperator",
+                  "range": {
+                    "begin": {
+                      "col": 59,
+                      "tokLen": 3
+                    },
+                    "end": {
+                      "col": 76,
+                      "tokLen": 4
+                    }
+                  },
+                  "type": {
+                    "qualType": "bool"
+                  },
+                  "valueCategory": "rvalue",
+                  "opcode": "<",
+                  "inner": [
+                    {
+                      "id": "0x556969933cf8",
+                      "kind": "ImplicitCastExpr",
+                      "range": {
+                        "begin": {
+                          "col": 59,
+                          "tokLen": 3
+                        },
+                        "end": {
+                          "col": 74,
+                          "tokLen": 1
+                        }
+                      },
+                      "type": {
+                        "qualType": "double"
+                      },
+                      "valueCategory": "rvalue",
+                      "castKind": "FloatingCast",
+                      "inner": [
+                        {
+                          "id": "0x556969933cb0",
+                          "kind": "CallExpr",
+                          "range": {
+                            "begin": {
+                              "col": 59,
+                              "tokLen": 3
+                            },
+                            "end": {
+                              "col": 74,
+                              "tokLen": 1
+                            }
+                          },
+                          "type": {
+                            "qualType": "float"
+                          },
+                          "valueCategory": "rvalue",
+                          "inner": [
+                            {
+                              "id": "0x556969933c98",
+                              "kind": "ImplicitCastExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 59,
+                                  "tokLen": 3
+                                },
+                                "end": {
+                                  "col": 59,
+                                  "tokLen": 3
+                                }
+                              },
+                              "type": {
+                                "qualType": "float (*)(float)"
+                              },
+                              "valueCategory": "rvalue",
+                              "castKind": "FunctionToPointerDecay",
+                              "inner": [
+                                {
+                                  "id": "0x556969933c70",
+                                  "kind": "DeclRefExpr",
+                                  "range": {
+                                    "begin": {
+                                      "col": 59,
+                                      "tokLen": 3
+                                    },
+                                    "end": {
+                                      "col": 59,
+                                      "tokLen": 3
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "float (float)"
+                                  },
+                                  "valueCategory": "lvalue",
+                                  "referencedDecl": {
+                                    "id": "0x5569694a0698",
+                                    "kind": "FunctionDecl",
+                                    "name": "abs",
+                                    "type": {
+                                      "qualType": "float (float)"
+                                    }
+                                  },
+                                  "foundReferencedDecl": {
+                                    "id": "0x556969931e68",
+                                    "kind": "UsingShadowDecl",
+                                    "name": "abs"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "0x556969933c50",
+                              "kind": "BinaryOperator",
+                              "range": {
+                                "begin": {
+                                  "col": 63,
+                                  "tokLen": 1
+                                },
+                                "end": {
+                                  "col": 73,
+                                  "tokLen": 1
+                                }
+                              },
+                              "type": {
+                                "qualType": "float"
+                              },
+                              "valueCategory": "rvalue",
+                              "opcode": "-",
+                              "inner": [
+                                {
+                                  "id": "0x556969933ba0",
+                                  "kind": "BinaryOperator",
+                                  "range": {
+                                    "begin": {
+                                      "col": 63,
+                                      "tokLen": 1
+                                    },
+                                    "end": {
+                                      "col": 69,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "float"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "opcode": "+",
+                                  "inner": [
+                                    {
+                                      "id": "0x556969933af0",
+                                      "kind": "BinaryOperator",
+                                      "range": {
+                                        "begin": {
+                                          "col": 63,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 65,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "float"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "opcode": "*",
+                                      "inner": [
+                                        {
+                                          "id": "0x556969933ac0",
+                                          "kind": "ImplicitCastExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 63,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 63,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "float"
+                                          },
+                                          "valueCategory": "rvalue",
+                                          "castKind": "LValueToRValue",
+                                          "inner": [
+                                            {
+                                              "id": "0x556969933a80",
+                                              "kind": "DeclRefExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 63,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 63,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "float"
+                                              },
+                                              "valueCategory": "lvalue",
+                                              "referencedDecl": {
+                                                "id": "0x556969933160",
+                                                "kind": "ParmVarDecl",
+                                                "name": "b",
+                                                "type": {
+                                                  "qualType": "float"
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "0x556969933ad8",
+                                          "kind": "ImplicitCastExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 65,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 65,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "float"
+                                          },
+                                          "valueCategory": "rvalue",
+                                          "castKind": "LValueToRValue",
+                                          "inner": [
+                                            {
+                                              "id": "0x556969933aa0",
+                                              "kind": "DeclRefExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 65,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 65,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "float"
+                                              },
+                                              "valueCategory": "lvalue",
+                                              "referencedDecl": {
+                                                "id": "0x556969933160",
+                                                "kind": "ParmVarDecl",
+                                                "name": "b",
+                                                "type": {
+                                                  "qualType": "float"
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "0x556969933b80",
+                                      "kind": "BinaryOperator",
+                                      "range": {
+                                        "begin": {
+                                          "col": 67,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 69,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "float"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "opcode": "*",
+                                      "inner": [
+                                        {
+                                          "id": "0x556969933b50",
+                                          "kind": "ImplicitCastExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 67,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 67,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "float"
+                                          },
+                                          "valueCategory": "rvalue",
+                                          "castKind": "LValueToRValue",
+                                          "inner": [
+                                            {
+                                              "id": "0x556969933b10",
+                                              "kind": "DeclRefExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 67,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 67,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "float"
+                                              },
+                                              "valueCategory": "lvalue",
+                                              "referencedDecl": {
+                                                "id": "0x5569699331e0",
+                                                "kind": "ParmVarDecl",
+                                                "name": "c",
+                                                "type": {
+                                                  "qualType": "float"
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "0x556969933b68",
+                                          "kind": "ImplicitCastExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 69,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 69,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "float"
+                                          },
+                                          "valueCategory": "rvalue",
+                                          "castKind": "LValueToRValue",
+                                          "inner": [
+                                            {
+                                              "id": "0x556969933b30",
+                                              "kind": "DeclRefExpr",
+                                              "range": {
+                                                "begin": {
+                                                  "col": 69,
+                                                  "tokLen": 1
+                                                },
+                                                "end": {
+                                                  "col": 69,
+                                                  "tokLen": 1
+                                                }
+                                              },
+                                              "type": {
+                                                "qualType": "float"
+                                              },
+                                              "valueCategory": "lvalue",
+                                              "referencedDecl": {
+                                                "id": "0x5569699331e0",
+                                                "kind": "ParmVarDecl",
+                                                "name": "c",
+                                                "type": {
+                                                  "qualType": "float"
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "0x556969933c30",
+                                  "kind": "BinaryOperator",
+                                  "range": {
+                                    "begin": {
+                                      "col": 71,
+                                      "tokLen": 1
+                                    },
+                                    "end": {
+                                      "col": 73,
+                                      "tokLen": 1
+                                    }
+                                  },
+                                  "type": {
+                                    "qualType": "float"
+                                  },
+                                  "valueCategory": "rvalue",
+                                  "opcode": "*",
+                                  "inner": [
+                                    {
+                                      "id": "0x556969933c00",
+                                      "kind": "ImplicitCastExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 71,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 71,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "float"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "castKind": "LValueToRValue",
+                                      "inner": [
+                                        {
+                                          "id": "0x556969933bc0",
+                                          "kind": "DeclRefExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 71,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 71,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "float"
+                                          },
+                                          "valueCategory": "lvalue",
+                                          "referencedDecl": {
+                                            "id": "0x5569699330e0",
+                                            "kind": "ParmVarDecl",
+                                            "name": "a",
+                                            "type": {
+                                              "qualType": "float"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "0x556969933c18",
+                                      "kind": "ImplicitCastExpr",
+                                      "range": {
+                                        "begin": {
+                                          "col": 73,
+                                          "tokLen": 1
+                                        },
+                                        "end": {
+                                          "col": 73,
+                                          "tokLen": 1
+                                        }
+                                      },
+                                      "type": {
+                                        "qualType": "float"
+                                      },
+                                      "valueCategory": "rvalue",
+                                      "castKind": "LValueToRValue",
+                                      "inner": [
+                                        {
+                                          "id": "0x556969933be0",
+                                          "kind": "DeclRefExpr",
+                                          "range": {
+                                            "begin": {
+                                              "col": 73,
+                                              "tokLen": 1
+                                            },
+                                            "end": {
+                                              "col": 73,
+                                              "tokLen": 1
+                                            }
+                                          },
+                                          "type": {
+                                            "qualType": "float"
+                                          },
+                                          "valueCategory": "lvalue",
+                                          "referencedDecl": {
+                                            "id": "0x5569699330e0",
+                                            "kind": "ParmVarDecl",
+                                            "name": "a",
+                                            "type": {
+                                              "qualType": "float"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0x556969933cd8",
+                      "kind": "FloatingLiteral",
+                      "range": {
+                        "begin": {
+                          "col": 76,
+                          "tokLen": 4
+                        },
+                        "end": {
+                          "col": 76,
+                          "tokLen": 4
+                        }
+                      },
+                      "type": {
+                        "qualType": "double"
+                      },
+                      "valueCategory": "rvalue",
+                      "value": "1.0E-4"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "0x556969933d60",
+              "kind": "ReturnStmt",
+              "range": {
+                "begin": {
+                  "col": 82,
+                  "tokLen": 6
+                },
+                "end": {
+                  "col": 89,
+                  "tokLen": 4
+                }
+              },
+              "inner": [
+                {
+                  "id": "0x556969933d50",
+                  "kind": "CXXBoolLiteralExpr",
+                  "range": {
+                    "begin": {
+                      "col": 89,
+                      "tokLen": 4
+                    },
+                    "end": {
+                      "col": 89,
+                      "tokLen": 4
+                    }
+                  },
+                  "type": {
+                    "qualType": "bool"
+                  },
+                  "valueCategory": "rvalue",
+                  "value": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "0x556969933d98",
+          "kind": "ReturnStmt",
+          "range": {
+            "begin": {
+              "line": 8,
+              "col": 5,
+              "tokLen": 6
+            },
+            "end": {
+              "col": 12,
+              "tokLen": 5
+            }
+          },
+          "inner": [
+            {
+              "id": "0x556969933d88",
+              "kind": "CXXBoolLiteralExpr",
+              "range": {
+                "begin": {
+                  "col": 12,
+                  "tokLen": 5
+                },
+                "end": {
+                  "col": 12,
+                  "tokLen": 5
+                }
+              },
+              "type": {
+                "qualType": "bool"
+              },
+              "valueCategory": "rvalue",
+              "value": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+]
+}

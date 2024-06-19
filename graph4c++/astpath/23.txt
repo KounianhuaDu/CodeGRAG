@@ -1,0 +1,205 @@
+{
+"kind":"fileAST",
+"inner":[
+{
+  "id": "0x5574fbc9fd30",
+  "kind": "FunctionDecl",
+  "loc": {
+    "file": "/ext0/knhdu/CodeRAG/data/transcode/codes/23.cpp",
+    "line": 7,
+    "col": 5,
+    "tokLen": 6
+  },
+  "range": {
+    "begin": {
+      "col": 1,
+      "tokLen": 3
+    },
+    "end": {
+      "line": 9,
+      "col": 1,
+      "tokLen": 1
+    }
+  },
+  "name": "strlen",
+  "type": {
+    "qualType": "int (std::string)"
+  },
+  "inner": [
+    {
+      "id": "0x5574fbc9fc30",
+      "kind": "ParmVarDecl",
+      "loc": {
+        "line": 7,
+        "col": 19,
+        "tokLen": 3
+      },
+      "range": {
+        "begin": {
+          "col": 12,
+          "tokLen": 6
+        },
+        "end": {
+          "col": 19,
+          "tokLen": 3
+        }
+      },
+      "isUsed": true,
+      "name": "str",
+      "type": {
+        "desugaredQualType": "std::__cxx11::basic_string<char>",
+        "qualType": "std::string"
+      }
+    },
+    {
+      "id": "0x5574fbc9fe88",
+      "kind": "CompoundStmt",
+      "range": {
+        "begin": {
+          "col": 23,
+          "tokLen": 1
+        },
+        "end": {
+          "line": 9,
+          "col": 1,
+          "tokLen": 1
+        }
+      },
+      "inner": [
+        {
+          "id": "0x5574fbc9fe78",
+          "kind": "ReturnStmt",
+          "range": {
+            "begin": {
+              "line": 8,
+              "col": 5,
+              "tokLen": 6
+            },
+            "end": {
+              "col": 23,
+              "tokLen": 1
+            }
+          },
+          "inner": [
+            {
+              "id": "0x5574fbc9fe60",
+              "kind": "ImplicitCastExpr",
+              "range": {
+                "begin": {
+                  "col": 12,
+                  "tokLen": 3
+                },
+                "end": {
+                  "col": 23,
+                  "tokLen": 1
+                }
+              },
+              "type": {
+                "qualType": "int"
+              },
+              "valueCategory": "rvalue",
+              "castKind": "IntegralCast",
+              "inner": [
+                {
+                  "id": "0x5574fbc9fe28",
+                  "kind": "CXXMemberCallExpr",
+                  "range": {
+                    "begin": {
+                      "col": 12,
+                      "tokLen": 3
+                    },
+                    "end": {
+                      "col": 23,
+                      "tokLen": 1
+                    }
+                  },
+                  "type": {
+                    "desugaredQualType": "unsigned long",
+                    "qualType": "std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size_type"
+                  },
+                  "valueCategory": "rvalue",
+                  "inner": [
+                    {
+                      "id": "0x5574fbc9fdf8",
+                      "kind": "MemberExpr",
+                      "range": {
+                        "begin": {
+                          "col": 12,
+                          "tokLen": 3
+                        },
+                        "end": {
+                          "col": 16,
+                          "tokLen": 6
+                        }
+                      },
+                      "type": {
+                        "qualType": "<bound member function type>"
+                      },
+                      "valueCategory": "rvalue",
+                      "name": "length",
+                      "isArrow": false,
+                      "referencedMemberDecl": "0x5574fb9d1e48",
+                      "inner": [
+                        {
+                          "id": "0x5574fbc9fe48",
+                          "kind": "ImplicitCastExpr",
+                          "range": {
+                            "begin": {
+                              "col": 12,
+                              "tokLen": 3
+                            },
+                            "end": {
+                              "col": 12,
+                              "tokLen": 3
+                            }
+                          },
+                          "type": {
+                            "qualType": "const std::__cxx11::basic_string<char>"
+                          },
+                          "valueCategory": "lvalue",
+                          "castKind": "NoOp",
+                          "inner": [
+                            {
+                              "id": "0x5574fbc9fdd8",
+                              "kind": "DeclRefExpr",
+                              "range": {
+                                "begin": {
+                                  "col": 12,
+                                  "tokLen": 3
+                                },
+                                "end": {
+                                  "col": 12,
+                                  "tokLen": 3
+                                }
+                              },
+                              "type": {
+                                "desugaredQualType": "std::__cxx11::basic_string<char>",
+                                "qualType": "std::string"
+                              },
+                              "valueCategory": "lvalue",
+                              "referencedDecl": {
+                                "id": "0x5574fbc9fc30",
+                                "kind": "ParmVarDecl",
+                                "name": "str",
+                                "type": {
+                                  "desugaredQualType": "std::__cxx11::basic_string<char>",
+                                  "qualType": "std::string"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+]
+}
