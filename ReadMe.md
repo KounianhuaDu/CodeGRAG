@@ -1,6 +1,6 @@
-# Graph Syntax RAG
+# CodeGRAG
 
-This is the repo for Graph Syntax RAG.
+This is the repo for CodeGRAG.
 
 ## Requirements
 
