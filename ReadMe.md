@@ -33,7 +33,7 @@ You should first prepare model weights under model_weights/ folder. Following we
 ## Run
 Under the [`test`](test/) folder:
 
-### Single Round Direct Prompt
+### Meta Graph Prompt
 For one round generation, please run:
 ```bash
 python run_raw_multilingual.py --lang [programming_language] --output [your_output_path]
@@ -47,4 +47,7 @@ python run_with_graph.py --lang [programming_language] --output [your_output_pat
 Two result files are included:
 - cpp_results/samples_with_graph.jsonl
 - python_results/samples_with_graph.jsonl
+
+### Soft Prompting
+See under the [`soft_prompt`](soft_prompt/) folder.
 
