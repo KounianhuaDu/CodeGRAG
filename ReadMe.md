@@ -7,13 +7,11 @@ This is the repo for CodeGRAG.
 ## Data Preparation
 For C++ codes:
 - AST/CFG/GraphView
-Under the [`mvg`](mvg/) folder, run:
 ```bash
 sh run_ast_cfg_graph.sh
 ```
 
 - Build DGL Graph
-Under [`utils`](utils/) folder:
 ```bash
 python build_graph.py
 ```
