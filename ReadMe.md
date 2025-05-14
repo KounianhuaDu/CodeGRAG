@@ -53,13 +53,9 @@ See under the [`soft_prompt`](soft_prompt/) folder.
 If you find this repo useful, please cite our paper:
 
 @article{du2024codegrag,
-
   title={CodeGRAG: Extracting Composed Syntax Graphs for Retrieval Augmented Cross-Lingual Code Generation},
-  
   author={Du, Kounianhua and Rui, Renting and Chai, Huacan and Fu, Lingyue and Xia, Wei and Wang, Yasheng and Tang, Ruiming and Yu, Yong and Zhang, Weinan},
-  
   journal={arXiv preprint arXiv:2405.02355},
-  
   year={2024}
 }
 
