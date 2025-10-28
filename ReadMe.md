@@ -2,6 +2,9 @@
 
 This is the repo for CodeGRAG.
 
+<img width="516" height="299" alt="image" src="https://github.com/user-attachments/assets/ebaab159-3ea4-445f-b719-a0a20a6477bb" />
+
+
 ## Requirements
 
 ## Data Preparation
